@@ -1,0 +1,1703 @@
+/* =========================================
+   THE ROOTED ROBIN
+   Main Website Stylesheet
+========================================= */
+
+
+/* =========================================
+   COLOR AND FONT VARIABLES
+========================================= */
+
+:root {
+  --forest: #173c32;
+  --deep: #0e2b24;
+  --sage: #8ea58a;
+  --pale: #dce2cf;
+  --cream: #f7f1e5;
+  --paper: #fffaf0;
+  --gold: #b88a3b;
+  --ink: #27352f;
+  --muted: #6b746d;
+  --line: rgba(23, 60, 50, 0.18);
+
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: Montserrat, Arial, sans-serif;
+  --script: Parisienne, cursive;
+}
+
+
+/* =========================================
+   BASIC PAGE STYLING
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  color: var(--ink);
+
+  /*
+    background1.jpg is located inside the img folder.
+
+    style.css is inside the CSS folder, so ../ moves
+    out of CSS and then img/ enters the image folder.
+  */
+
+  background-color: var(--cream);
+
+  background-image:
+    linear-gradient(
+      rgba(247, 241, 229, 0.78),
+      rgba(247, 241, 229, 0.78)
+    ),
+    url("../img/background1.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================================
+   ACCESSIBILITY SKIP LINK
+========================================= */
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: -999px;
+  z-index: 99;
+
+  padding: 0.7rem;
+
+  background-color: white;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+
+/* =========================================
+   HEADER AND NAVIGATION
+========================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 90px;
+
+  padding: 0 clamp(1.2rem, 4vw, 5rem);
+
+  background-color: rgba(247, 241, 229, 0.94);
+
+  border-bottom: 1px solid var(--line);
+
+  backdrop-filter: blur(12px);
+}
+
+
+/* ---------- Logo ---------- */
+
+.brand {
+  display: flex;
+  align-items: center;
+
+  gap: 0.8rem;
+
+  color: var(--forest);
+
+  text-decoration: none;
+}
+
+.brand-mark {
+  color: var(--gold);
+
+  font-size: 2.3rem;
+
+  line-height: 1;
+}
+
+.brand strong {
+  display: block;
+
+  font-family: var(--script);
+
+  font-size: 2rem;
+
+  line-height: 1;
+}
+
+.brand small {
+  font-size: 0.56rem;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+
+/* ---------- Navigation ---------- */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+
+  gap: clamp(0.7rem, 2vw, 2rem);
+}
+
+.main-nav a {
+  padding: 0.65rem 0;
+
+  border-bottom: 1px solid transparent;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.13em;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--gold);
+
+  border-color: var(--gold);
+}
+
+.main-nav .nav-cta {
+  padding: 0.65rem 1.2rem;
+
+  border: 1px solid var(--forest);
+}
+
+
+/* ---------- Mobile Menu Button ---------- */
+
+.menu-button {
+  display: none;
+
+  padding: 0.55rem 0.8rem;
+
+  color: var(--forest);
+
+  background-color: transparent;
+
+  border: 1px solid var(--forest);
+
+  font-family: var(--sans);
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   HOME PAGE HERO
+========================================= */
+
+.hero {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1.08fr 0.92fr;
+
+  min-height: calc(100vh - 90px);
+
+  color: var(--cream);
+
+  background-color: rgba(23, 60, 50, 0.96);
+
+  overflow: hidden;
+}
+
+
+/* ---------- Subtle Wood Lines ---------- */
+
+.hero::before,
+.page-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.1;
+
+  background-image:
+    repeating-linear-gradient(
+      115deg,
+      transparent 0 38px,
+      rgba(255, 255, 255, 0.18) 39px 40px
+    );
+}
+
+
+/* ---------- Hero Text ---------- */
+
+.hero-copy {
+  position: relative;
+
+  z-index: 2;
+
+  padding:
+    clamp(5rem, 10vw, 9rem)
+    3rem
+    clamp(5rem, 9vw, 8rem)
+    clamp(2rem, 9vw, 9rem);
+}
+
+
+/* ---------- Small Gold Headings ---------- */
+
+.eyebrow {
+  margin: 0 0 1rem;
+
+  color: var(--gold);
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.24em;
+
+  text-transform: uppercase;
+}
+
+
+/* ---------- Main Headings ---------- */
+
+.hero h1,
+.page-hero h1 {
+  margin: 0.2rem 0 1.7rem;
+
+  font-family: var(--serif);
+
+  font-size: clamp(3.6rem, 7vw, 7rem);
+
+  font-weight: 600;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.035em;
+}
+
+.hero h1 em,
+.split h2 em {
+  color: #d4ba77;
+
+  font-family: var(--script);
+
+  font-weight: 400;
+}
+
+.hero-copy > p:not(.eyebrow) {
+  max-width: 610px;
+
+  color: #e4e5db;
+
+  font-size: 1.05rem;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.button-row {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-block;
+
+  padding: 1rem 1.5rem;
+
+  border: 1px solid var(--gold);
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  transition:
+    background-color 0.25s,
+    color 0.25s,
+    transform 0.25s;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  color: var(--deep);
+
+  background-color: var(--gold);
+}
+
+.button-primary:hover {
+  background-color: #cfaa62;
+}
+
+.button-ghost {
+  color: var(--cream);
+}
+
+.button-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   DECORATIVE APOTHECARY ARTWORK
+========================================= */
+
+.hero-art {
+  position: relative;
+
+  min-height: 520px;
+
+  background-image:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(247, 241, 229, 0.18),
+      transparent 48%
+    );
+}
+
+
+/* ---------- Moon ---------- */
+
+.moon {
+  position: absolute;
+
+  top: 15%;
+  left: 35%;
+
+  width: 310px;
+  height: 310px;
+
+  border-radius: 50%;
+
+  background-image:
+    radial-gradient(
+      circle at 35% 35%,
+      #fff9e8,
+      #cdbd8e 75%,
+      #98825d
+    );
+
+  box-shadow:
+    0 0 90px rgba(255, 245, 205, 0.3);
+}
+
+
+/* ---------- Bottles ---------- */
+
+.bottle {
+  position: absolute;
+
+  bottom: 14%;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    2px solid rgba(240, 215, 158, 0.8);
+
+  background-image:
+    linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0.18),
+      rgba(11, 38, 32, 0.7)
+    );
+
+  box-shadow:
+    0 25px 40px rgba(0, 0, 0, 0.3);
+}
+
+.bottle::before {
+  content: "";
+
+  position: absolute;
+
+  top: -58px;
+
+  width: 45%;
+  height: 58px;
+
+  background-color: #4f3924;
+
+  border:
+    2px solid rgba(240, 215, 158, 0.8);
+
+  border-bottom: 0;
+}
+
+.bottle span {
+  padding: 1rem 0.5rem;
+
+  color: var(--forest);
+
+  background-color:
+    rgba(247, 241, 229, 0.86);
+
+  border: 1px solid var(--gold);
+
+  font-family: var(--serif);
+
+  font-size: 0.7rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.23em;
+}
+
+.bottle-one {
+  left: 25%;
+
+  width: 145px;
+  height: 280px;
+
+  border-radius:
+    30% 30% 15px 15px;
+}
+
+.bottle-two {
+  right: 17%;
+
+  width: 120px;
+  height: 210px;
+
+  border-radius:
+    45% 45% 12px 12px;
+}
+
+
+/* ---------- Plant Sprigs ---------- */
+
+.sprig {
+  position: absolute;
+
+  bottom: 3%;
+
+  color: var(--sage);
+
+  font-size: 14rem;
+
+  line-height: 1;
+
+  filter:
+    drop-shadow(
+      0 15px 7px rgba(0, 0, 0, 0.3)
+    );
+}
+
+.sprig-left {
+  left: -3%;
+
+  transform: rotate(-28deg);
+}
+
+.sprig-right {
+  right: -8%;
+
+  transform: rotate(205deg);
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section-pad {
+  padding:
+    clamp(4.5rem, 8vw, 8rem)
+    clamp(1.3rem, 8vw, 8rem);
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.intro {
+  max-width: 980px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.intro h2,
+.split h2,
+.newsletter h2,
+.content-section h2 {
+  margin: 0.4rem 0 1.5rem;
+
+  color: var(--forest);
+
+  font-family: var(--serif);
+
+  font-size:
+    clamp(2.5rem, 5vw, 4.6rem);
+
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+.wide-copy {
+  max-width: 760px;
+
+  margin: auto;
+
+  color: var(--muted);
+}
+
+
+/* =========================================
+   CATEGORY CARDS
+========================================= */
+
+.category-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1.4rem;
+
+  padding-top: 0;
+}
+
+.category-card {
+  position: relative;
+
+  padding: 2.5rem;
+
+  background-color:
+    rgba(255, 250, 240, 0.88);
+
+  border:
+    1px solid var(--line);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 40px
+    rgba(23, 60, 50, 0.1);
+}
+
+.card-icon {
+  color: var(--gold);
+
+  font-size: 2rem;
+}
+
+.category-card h3 {
+  margin: 0.2rem 0 0.7rem;
+
+  color: var(--forest);
+
+  font-family: var(--serif);
+
+  font-size: 2rem;
+
+  font-weight: 600;
+}
+
+.category-card p:not(.eyebrow) {
+  color: var(--muted);
+
+  font-size: 0.9rem;
+}
+
+.category-card a,
+.text-link {
+  color: var(--forest);
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+}
+
+.category-card a span,
+.text-link span {
+  margin-left: 0.3rem;
+
+  color: var(--gold);
+
+  font-size: 1.2rem;
+}
+
+
+/* =========================================
+   MISSION SECTION
+========================================= */
+
+.mission-band {
+  position: relative;
+
+  padding: 6rem 1.5rem;
+
+  color: var(--cream);
+
+  background-color:
+    rgba(14, 43, 36, 0.97);
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.mission-quote > span {
+  color: var(--gold);
+
+  font-family: var(--serif);
+
+  font-size: 6rem;
+
+  line-height: 0;
+}
+
+.mission-quote blockquote {
+  max-width: 850px;
+
+  margin: 1rem auto;
+
+  font-family: var(--serif);
+
+  font-size:
+    clamp(2.5rem, 5vw, 4.5rem);
+
+  font-weight: 500;
+
+  line-height: 1.1;
+}
+
+.mission-quote p {
+  color: var(--sage);
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   ARTISAN SECTION
+========================================= */
+
+.split {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  align-items: center;
+
+  gap:
+    clamp(3rem, 7vw, 8rem);
+}
+
+.artisan-art {
+  min-height: 520px;
+
+  padding: 2rem;
+
+  background-image:
+    linear-gradient(
+      145deg,
+      var(--sage),
+      var(--forest)
+    );
+
+  box-shadow:
+    22px 22px 0 var(--pale);
+}
+
+.portrait-placeholder {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 456px;
+
+  height: 100%;
+
+  color:
+    rgba(255, 255, 255, 0.65);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.45);
+}
+
+.portrait-placeholder span {
+  font-size: 6rem;
+}
+
+.portrait-placeholder small {
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.split-copy p:not(.eyebrow) {
+  max-width: 580px;
+
+  color: var(--muted);
+}
+
+
+/* =========================================
+   INSTAGRAM SECTION
+========================================= */
+
+.newsletter {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  margin:
+    0 clamp(1.3rem, 4vw, 4rem)
+    5rem;
+
+  padding-top: 4rem;
+
+  padding-bottom: 4rem;
+
+  background-color:
+    rgba(220, 226, 207, 0.94);
+}
+
+.newsletter h2 {
+  margin: 0.2rem 0;
+
+  font-size: 3rem;
+}
+
+.newsletter p {
+  max-width: 600px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+  display: grid;
+
+  grid-template-columns:
+    2fr 1fr 1.2fr;
+
+  gap: 3rem;
+
+  padding:
+    4rem
+    clamp(1.5rem, 8vw, 8rem)
+    1.5rem;
+
+  color: #dbe1d4;
+
+  background-color:
+    #0a231d;
+}
+
+.footer-brand strong {
+  display: block;
+
+  font-family: var(--script);
+
+  font-size: 2.2rem;
+}
+
+.footer-brand p {
+  color: #9fb1a5;
+
+  font-size: 0.8rem;
+}
+
+.site-footer h2 {
+  color: var(--gold);
+
+  font-family: var(--serif);
+
+  font-size: 1.2rem;
+
+  font-weight: 600;
+}
+
+.site-footer a {
+  display: block;
+
+  margin: 0.5rem 0;
+
+  color: #dbe1d4;
+
+  font-size: 0.8rem;
+
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--gold);
+}
+
+.copyright {
+  grid-column: 1 / -1;
+
+  padding-top: 1.2rem;
+
+  color: #7f988b;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  font-size: 0.7rem;
+}
+
+
+/* =========================================
+   INNER PAGE HERO
+========================================= */
+
+.page-hero {
+  position: relative;
+
+  display: grid;
+
+  place-items: center;
+
+  min-height: 420px;
+
+  padding: 5rem 1.5rem;
+
+  color: var(--cream);
+
+  background-color:
+    rgba(23, 60, 50, 0.96);
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.page-hero > div {
+  position: relative;
+
+  z-index: 2;
+}
+
+.page-hero h1 {
+  margin: 0.4rem 0 1rem;
+}
+
+.page-hero p {
+  max-width: 650px;
+
+  margin: auto;
+
+  color: #dbe1d4;
+}
+
+
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.content-section {
+  max-width: 1150px;
+
+  margin: auto;
+}
+
+.prose {
+  max-width: 750px;
+
+  margin: auto;
+
+  padding: 2rem;
+
+  background-color:
+    rgba(255, 250, 240, 0.75);
+}
+
+.prose p {
+  margin: 0 0 1.4rem;
+
+  color: var(--muted);
+}
+
+.values-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1.4rem;
+
+  margin-top: 3rem;
+}
+
+.value {
+  padding: 2rem;
+
+  background-color:
+    rgba(255, 250, 240, 0.9);
+
+  border-top:
+    2px solid var(--gold);
+}
+
+.value h3 {
+  color: var(--forest);
+
+  font-family: var(--serif);
+
+  font-size: 1.7rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   PRODUCTS PAGE
+========================================= */
+
+.product-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1.5rem;
+}
+
+.product-card {
+  background-color:
+    rgba(255, 250, 240, 0.92);
+
+  border:
+    1px solid var(--line);
+
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 40px
+    rgba(23, 60, 50, 0.12);
+}
+
+
+/* ---------- Product Images ---------- */
+
+.product-image,
+.gallery-item {
+  position: relative;
+
+  display: grid;
+
+  place-items: center;
+
+  aspect-ratio: 1 / 1;
+
+  color:
+    rgba(23, 60, 50, 0.62);
+
+  background-image:
+    linear-gradient(
+      145deg,
+      var(--pale),
+      var(--sage)
+    );
+
+  overflow: hidden;
+}
+
+.product-image img,
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.product-image:empty::before,
+.gallery-item:not(:has(img))::before {
+  content: "❧";
+
+  font-size: 7rem;
+
+  transform: rotate(-20deg);
+}
+
+
+/* ---------- Product Information ---------- */
+
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-info h3 {
+  margin: 0;
+
+  color: var(--forest);
+
+  font-family: var(--serif);
+
+  font-size: 1.7rem;
+
+  font-weight: 600;
+}
+
+.product-info .price {
+  color: var(--gold);
+
+  font-weight: 600;
+}
+
+.product-info p {
+  color: var(--muted);
+
+  font-size: 0.85rem;
+}
+
+
+/* ---------- Product Notice ---------- */
+
+.notice {
+  margin-bottom: 2.5rem;
+
+  padding: 1rem 1.3rem;
+
+  background-color:
+    rgba(255, 248, 232, 0.94);
+
+  border:
+    1px solid var(--gold);
+}
+
+
+/* ---------- Product Sections ---------- */
+
+.product-section {
+  padding-top: 2rem;
+}
+
+
+/* ---------- Product Call To Action ---------- */
+
+.product-cta {
+  max-width: 800px;
+
+  margin: 5rem auto 0;
+
+  padding: 3rem;
+
+  background-color:
+    rgba(255, 250, 240, 0.92);
+
+  border:
+    1px solid var(--line);
+
+  text-align: center;
+}
+
+.product-cta h2 {
+  margin-top: 0;
+}
+
+.product-cta p {
+  max-width: 600px;
+
+  margin:
+    0 auto 2rem;
+
+  color: var(--muted);
+}
+
+
+/* =========================================
+   GALLERY PAGE
+========================================= */
+
+/* ---------- Filter Buttons ---------- */
+
+.filters {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 0.6rem;
+
+  margin-bottom: 2rem;
+}
+
+.filter {
+  padding: 0.7rem 1rem;
+
+  color: var(--forest);
+
+  background-color:
+    rgba(247, 241, 229, 0.9);
+
+  border:
+    1px solid var(--forest);
+
+  font-family: var(--sans);
+
+  font-size: 0.65rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.filter.active,
+.filter:hover {
+  color: var(--cream);
+
+  background-color:
+    var(--forest);
+}
+
+
+/* ---------- Gallery Grid ---------- */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1rem;
+}
+
+.gallery-item:nth-child(2n) {
+  background-image:
+    linear-gradient(
+      145deg,
+      #d9c69d,
+      #7a8e72
+    );
+}
+
+.gallery-item:nth-child(3n) {
+  background-image:
+    linear-gradient(
+      145deg,
+      #b6aa97,
+      #315b4d
+    );
+}
+
+.gallery-item span {
+  position: absolute;
+
+  bottom: 1rem;
+  left: 1rem;
+
+  padding: 0.4rem 0.7rem;
+
+  color: white;
+
+  background-color:
+    rgba(14, 43, 36, 0.85);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.gallery-note {
+  margin-top: 2rem;
+
+  color: var(--muted);
+
+  text-align: center;
+}
+
+
+/* =========================================
+   CONTACT PAGE
+========================================= */
+
+.contact-layout {
+  display: grid;
+
+  grid-template-columns:
+    0.8fr 1.2fr;
+
+  gap: 4rem;
+}
+
+
+/* ---------- Contact Information ---------- */
+
+.contact-details {
+  padding: 3rem;
+
+  color: var(--cream);
+
+  background-color:
+    rgba(23, 60, 50, 0.97);
+}
+
+.contact-details h2 {
+  color: var(--cream);
+
+  font-size: 2.8rem;
+}
+
+.contact-details a {
+  color: #e8d39b;
+}
+
+
+/* ---------- Contact Form ---------- */
+
+.contact-form {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 1.2rem;
+
+  padding: 2rem;
+
+  background-color:
+    rgba(255, 250, 240, 0.82);
+}
+
+.form-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.35rem;
+}
+
+.form-field.full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  color: var(--forest);
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 0.9rem;
+
+  color: var(--ink);
+
+  background-color:
+    var(--paper);
+
+  border:
+    1px solid var(--line);
+
+  font: inherit;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline:
+    2px solid var(--gold);
+
+  outline-offset: 2px;
+}
+
+.form-field textarea {
+  min-height: 150px;
+
+  resize: vertical;
+}
+
+.form-message {
+  grid-column: 1 / -1;
+
+  color: var(--forest);
+
+  font-size: 0.85rem;
+}
+
+.contact-form .button {
+  width: max-content;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+.reveal {
+  opacity: 0;
+
+  transform:
+    translateY(18px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+
+  transform: none;
+}
+
+
+/* Used by gallery filtering */
+
+[hidden] {
+  display: none !important;
+}
+
+
+/* =========================================
+   TABLET DESIGN
+========================================= */
+
+@media (max-width: 850px) {
+
+  /* ---------- Mobile Navigation ---------- */
+
+  .menu-button {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+
+    top: 90px;
+    right: 0;
+    left: 0;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding:
+      1rem 1.5rem 1.5rem;
+
+    background-color:
+      var(--cream);
+
+    border-bottom:
+      1px solid var(--line);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav a {
+    text-align: center;
+  }
+
+
+  /* ---------- Hero ---------- */
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    padding:
+      5rem 1.5rem;
+  }
+
+  .hero-art {
+    min-height: 480px;
+  }
+
+
+  /* ---------- Grid Layouts ---------- */
+
+  .category-grid,
+  .values-grid,
+  .product-grid,
+  .gallery-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .split,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ---------- Newsletter ---------- */
+
+  .newsletter {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  /* ---------- Footer ---------- */
+
+  .site-footer {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .footer-brand {
+    grid-column:
+      1 / -1;
+  }
+}
+
+
+/* =========================================
+   PHONE DESIGN
+========================================= */
+
+@media (max-width: 560px) {
+
+  /* ---------- Header ---------- */
+
+  .site-header {
+    height: 78px;
+  }
+
+  .brand strong {
+    font-size: 1.65rem;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .main-nav {
+    top: 78px;
+  }
+
+
+  /* ---------- Hero ---------- */
+
+  .hero {
+    min-height: 0;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    font-size: 3.4rem;
+  }
+
+  .hero-art {
+    min-height: 400px;
+  }
+
+
+  /* ---------- Decorative Hero ---------- */
+
+  .moon {
+    left: 25%;
+
+    width: 230px;
+    height: 230px;
+  }
+
+  .bottle-one {
+    width: 110px;
+    height: 210px;
+  }
+
+  .bottle-two {
+    width: 95px;
+    height: 170px;
+  }
+
+  .sprig {
+    font-size: 10rem;
+  }
+
+
+  /* ---------- One Column Layouts ---------- */
+
+  .category-grid,
+  .values-grid,
+  .product-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-pad {
+    padding-right: 1.2rem;
+
+    padding-left: 1.2rem;
+  }
+
+
+  /* ---------- Artisan ---------- */
+
+  .artisan-art {
+    min-height: 420px;
+
+    box-shadow:
+      12px 12px 0 var(--pale);
+  }
+
+
+  /* ---------- Product CTA ---------- */
+
+  .product-cta {
+    padding: 2rem 1.3rem;
+  }
+
+
+  /* ---------- Contact ---------- */
+
+  .contact-details {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+
+    padding: 1.5rem;
+  }
+
+  .form-field.full {
+    grid-column: auto;
+  }
+
+
+  /* ---------- Footer ---------- */
+
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  * {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+  }
+}

@@ -144,4 +144,616 @@
       <span>
         <strong>The Rooted Robin</strong>
         <small>Natural • Handcrafted • Rooted</small>
-      </spa
+      </span>
+
+    </a>
+
+    <!-- =======================================
+         MOBILE MENU BUTTON
+         =======================================
+         JavaScript listens for clicks on
+         .menu-button and opens/closes .main-nav.
+
+         aria-expanded starts as false and can be
+         changed by JavaScript when the menu opens.
+
+         aria-controls connects this button to:
+         #main-navigation
+    ======================================== -->
+    <button
+      class="menu-button"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
+      Menu
+    </button>
+
+    <!-- =========================================
+         MAIN NAVIGATION
+         =========================================
+         Connects the main HTML pages:
+
+         index.html    = Home
+         about.html    = About
+         products.html = Products
+         gallery.html  = Gallery
+         contact.html  = Contact
+
+         CSS:
+         .main-nav
+         .active
+         .nav-cta
+
+         "active" identifies Products as the page
+         currently being viewed.
+
+         .nav-cta gives the Contact link its
+         call-to-action appearance.
+    ========================================== -->
+    <nav
+      id="main-navigation"
+      class="main-nav"
+      aria-label="Main navigation"
+    >
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <!-- Current page -->
+      <a class="active" href="products.html">
+        Products
+      </a>
+
+      <a href="gallery.html">
+        Gallery
+      </a>
+
+      <a class="nav-cta" href="contact.html">
+        Contact
+      </a>
+
+    </nav>
+
+  </header>
+
+  <!-- =========================================
+       MAIN PAGE CONTENT
+       =========================================
+       id="main" connects to the Skip to Content
+       link at the top of the page.
+  ========================================== -->
+  <main id="main">
+
+    <!-- =========================================
+         PRODUCTS PAGE HERO
+         =========================================
+         Introduces visitors to the collection.
+
+         CSS:
+         .page-hero
+         .eyebrow
+    ========================================== -->
+    <section class="page-hero">
+
+      <div>
+
+        <p class="eyebrow">
+          Made by hand
+        </p>
+
+        <h1>The Collection</h1>
+
+        <p>
+          Explore botanical self-care, handmade jewelry,
+          and naturally inspired creations.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         NATURAL SELF-CARE SECTION
+         =========================================
+         Displays the self-care product category.
+
+         IMPORTANT PAGE CONNECTION:
+
+         id="self-care" allows another page to link
+         directly to this section.
+
+         For example, index.html contains:
+
+         products.html#self-care
+
+         Clicking that link opens products.html and
+         jumps directly to this section.
+
+         CSS:
+         .content-section
+         .section-pad
+         .eyebrow
+         .notice
+         .product-grid
+         .product-card
+         .product-image
+         .product-info
+         .price
+
+         JavaScript:
+         .reveal is used by script.js for the
+         scroll/reveal animation.
+    ========================================== -->
+    <section
+      id="self-care"
+      class="content-section section-pad"
+    >
+
+      <p class="eyebrow">
+        Botanical care
+      </p>
+
+      <h2>Natural Self-Care</h2>
+
+      <!-- =======================================
+           PRODUCT AVAILABILITY NOTICE
+           =======================================
+           Explains that customers should contact
+           The Rooted Robin for current availability
+           and pricing.
+
+           CSS:
+           .notice
+
+           Customers can use contact.html to submit
+           a purchase or bulk-order request.
+      ======================================== -->
+      <div class="notice">
+        Interested in purchasing an item or placing a bulk order?
+        Contact The Rooted Robin for current availability and pricing.
+      </div>
+
+      <!-- =========================================
+           SELF-CARE PRODUCT GRID
+           =========================================
+           Groups the self-care product cards.
+
+           CSS:
+           .product-grid
+
+           Responsive CSS can change the number of
+           columns depending on screen size.
+      ========================================== -->
+      <div class="product-grid">
+
+        <!-- =====================================
+             BOTANICAL SELF-CARE CARD
+             =====================================
+             CSS:
+             .product-card
+             .product-image
+             .product-info
+             .price
+             .reveal
+
+             JavaScript:
+             .reveal causes the card to animate
+             as it enters the viewport.
+
+             .product-image is currently an empty
+             placeholder styled through CSS.
+             A real product image can be added here
+             later.
+        ====================================== -->
+        <article class="product-card reveal">
+
+          <div class="product-image"></div>
+
+          <div class="product-info">
+
+            <h3>Botanical Self-Care</h3>
+
+            <p class="price">
+              Contact for pricing
+            </p>
+
+            <p>
+              Small-batch self-care products inspired by
+              natural ingredients and simple rituals.
+            </p>
+
+          </div>
+
+        </article>
+
+        <!-- =====================================
+             SEASONAL CREATIONS CARD
+             =====================================
+             Uses the same CSS structure as the
+             other product cards so all products
+             have a consistent appearance.
+
+             JavaScript:
+             .reveal adds the scroll animation.
+        ====================================== -->
+        <article class="product-card reveal">
+
+          <div class="product-image"></div>
+
+          <div class="product-info">
+
+            <h3>Seasonal Creations</h3>
+
+            <p class="price">
+              Contact for pricing
+            </p>
+
+            <p>
+              Limited seasonal products created in small
+              batches throughout the year.
+            </p>
+
+          </div>
+
+        </article>
+
+        <!-- =====================================
+             CUSTOM & BULK ORDERS CARD
+             =====================================
+             Introduces larger quantity and custom
+             product options.
+
+             Customers can continue to contact.html
+             to submit their request.
+        ====================================== -->
+        <article class="product-card reveal">
+
+          <div class="product-image"></div>
+
+          <div class="product-info">
+
+            <h3>Custom & Bulk Orders</h3>
+
+            <p class="price">
+              Custom pricing
+            </p>
+
+            <p>
+              Contact The Rooted Robin to discuss larger
+              quantities or special product requests.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         HANDMADE JEWELRY SECTION
+         =========================================
+         Displays the jewelry product category.
+
+         IMPORTANT PAGE CONNECTION:
+
+         id="jewelry" allows another page to link
+         directly to this section.
+
+         For example, index.html contains:
+
+         products.html#jewelry
+
+         Clicking that link opens this page and
+         jumps directly to the jewelry section.
+
+         CSS:
+         .content-section
+         .section-pad
+         .product-section
+         .product-grid
+         .product-card
+         .product-image
+         .product-info
+         .price
+         .product-cta
+
+         JavaScript:
+         .reveal is used for scroll animations.
+    ========================================== -->
+    <section
+      id="jewelry"
+      class="content-section section-pad product-section"
+    >
+
+      <p class="eyebrow">
+        Wearable magic
+      </p>
+
+      <h2>Handmade Jewelry</h2>
+
+      <!-- =========================================
+           JEWELRY PRODUCT GRID
+           =========================================
+           Groups all jewelry product cards.
+
+           CSS:
+           .product-grid
+      ========================================== -->
+      <div class="product-grid">
+
+        <!-- =====================================
+             NATURE-INSPIRED JEWELRY CARD
+
+             CSS:
+             .product-card
+             .product-image
+             .product-info
+             .price
+
+             JavaScript:
+             .reveal triggers the scroll animation.
+        ====================================== -->
+        <article class="product-card reveal">
+
+          <div class="product-image"></div>
+
+          <div class="product-info">
+
+            <h3>Nature-Inspired Jewelry</h3>
+
+            <p class="price">
+              Contact for pricing
+            </p>
+
+            <p>
+              Handmade pieces inspired by forests,
+              plants, stones, and the natural world.
+            </p>
+
+          </div>
+
+        </article>
+
+        <!-- =====================================
+             ONE-OF-A-KIND PIECES CARD
+             =====================================
+             Uses the same shared product-card CSS
+             as the other product listings.
+        ====================================== -->
+        <article class="product-card reveal">
+
+          <div class="product-image"></div>
+
+          <div class="product-info">
+
+            <h3>One-of-a-Kind Pieces</h3>
+
+            <p class="price">
+              Contact for pricing
+            </p>
+
+            <p>
+              Individual handmade designs created with
+              unique details and materials.
+            </p>
+
+          </div>
+
+        </article>
+
+        <!-- =====================================
+             CUSTOM JEWELRY CARD
+             =====================================
+             Introduces personalized jewelry.
+
+             Visitors can use contact.html to submit
+             a custom jewelry request.
+        ====================================== -->
+        <article class="product-card reveal">
+
+          <div class="product-image"></div>
+
+          <div class="product-info">
+
+            <h3>Custom Jewelry</h3>
+
+            <p class="price">
+              Custom pricing
+            </p>
+
+            <p>
+              Work directly with the artisan to create
+              a piece with personal meaning.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+      <!-- =========================================
+           COMMISSION CALL-TO-ACTION
+           =========================================
+           Encourages visitors to request:
+           - Custom jewelry
+           - Personal art projects
+           - Bulk product orders
+
+           CSS:
+           .product-cta
+           .button
+           .button-primary
+
+           JavaScript:
+           .reveal adds the scroll animation.
+
+           Page connection:
+           The button links to contact.html, where
+           the commission request form is located.
+      ========================================== -->
+      <div class="product-cta reveal">
+
+        <h2>
+          Looking for something personal?
+        </h2>
+
+        <p>
+          Custom jewelry, personal art projects, and
+          bulk requests are welcome.
+        </p>
+
+        <!--
+          Connects Products page to Contact page.
+        -->
+        <a
+          class="button button-primary"
+          href="contact.html"
+        >
+          Request a commission
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =========================================
+       SITE FOOTER
+       =========================================
+       Shared footer used across the website.
+
+       CSS:
+       .site-footer
+       .footer-brand
+       .brand-mark
+       .copyright
+
+       JavaScript:
+       <span data-year></span> is automatically
+       filled with the current year by script.js.
+  ========================================== -->
+  <footer class="site-footer">
+
+    <!-- =======================================
+         FOOTER BRAND
+         =======================================
+         Displays the business name, product type,
+         and location.
+
+         CSS:
+         .footer-brand
+         .brand-mark
+    ======================================== -->
+    <div class="footer-brand">
+
+      <span class="brand-mark">❧</span>
+
+      <strong>The Rooted Robin</strong>
+
+      <p>
+        Natural goods & handmade jewelry<br>
+        Shawano, Wisconsin
+      </p>
+
+    </div>
+
+    <!-- =======================================
+         FOOTER PAGE LINKS
+         =======================================
+         Connects this page to:
+
+         about.html
+         products.html
+         gallery.html
+    ======================================== -->
+    <div>
+
+      <h2>Explore</h2>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="products.html">
+        Products
+      </a>
+
+      <a href="gallery.html">
+        Gallery
+      </a>
+
+    </div>
+
+    <!-- =======================================
+         FOOTER CONTACT LINKS
+         =======================================
+         Email:
+         mailto: opens the visitor's email app.
+
+         Phone:
+         tel: opens the phone/dialer on supported
+         devices.
+
+         Instagram:
+         Opens the external Instagram website in
+         a new browser tab.
+    ======================================== -->
+    <div>
+
+      <h2>Connect</h2>
+
+      <a href="mailto:contactmiha@proton.me">
+        contactmiha@proton.me
+      </a>
+
+      <a href="tel:+12243866089">
+        224-386-6089
+      </a>
+
+      <a
+        href="https://instagram.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Instagram
+      </a>
+
+    </div>
+
+    <!-- =======================================
+         COPYRIGHT
+         =======================================
+         JavaScript finds the data-year attribute
+         and automatically inserts the current year.
+
+         HTML:
+         <span data-year></span>
+
+         JavaScript:
+         js/script.js
+
+         CSS:
+         .copyright
+
+         Example result:
+         © 2026 The Rooted Robin.
+         Handcrafted with care.
+    ======================================== -->
+    <p class="copyright">
+      © <span data-year></span> The Rooted Robin.
+      Handcrafted with care.
+    </p>
+
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- character encoding -->
+  <meta charset="utf-8">
+  <!-- layout scale -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Description for search engines -->
+  <meta
+    name="description"
+    content="Meet the artisan behind The Rooted Robin."
+  >
+  <!-- browser tab -->
+  <title>From the Artisan | The Rooted Robin</title>
+  <!-- Google Fonts, also in CSS through the site's font variables -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
+    rel="stylesheet"
+  >
+  <!-- Connects css -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- Connects JS -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- Accessibility link takes keyboard users directly to
+    <main id="main"> skip-link is styled in CSS -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Shared site header. .site-header, .brand, .brand-mark,
+    .menu-button, and .main-nav are styled in CSS.
+    Keep this header consistent across your HTML pages -->
+  <header class="site-header">
+    <!-- Clicking the logo/name opens index.html, the home page. -->
+    <a class="brand" href="index.html" aria-label="The Rooted Robin home">
+      <span class="brand-mark" aria-hidden="true">❧</span>
+      <span>
+        <strong>The Rooted Robin</strong>
+        <small>Natural • Handcrafted • Rooted</small>
+      </span>
+    </a>
+    <!-- Mobile menu button. CSS displays it on smaller screens.
+      JS toggle the navigation menu and update aria-expanded between "false" and "true".
+      aria-controls points to the navigation element whose id is "main-navigation" below.
+    -->
+    <button
+      class="menu-button"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
+      Menu
+    </button>
+    <!-- Shared navigation. Each href connects to another HTML page.
+      The "active" class marks About as the current page.
+      On mobile, JavaScript may add/remove an "open" class here.-->
+    <nav
+      id="main-navigation"
+      class="main-nav"
+      aria-label="Main navigation"
+    >
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="nav-cta" href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <!-- Destination of the Skip to content link at the top. -->
+  <main id="main">
+    <!-- Inner-page banner. .page-hero and .eyebrow are styled
+      in CSS. Other inner pages may reuse .page-hero -->
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow">
+          The hands behind the work
+        </p>
+        <h1>From the Artisan</h1>
+        <p>
+          A love letter to natural materials, slow creation,
+          and the wild beauty of Wisconsin's Northwoods.
+        </p>
+      </div>
+    </section>
+    <!-- .content-section sets the content width..section-pad adds spacing around the section.
+      Both classes come from CSS/style.css. -->
+    <section class="content-section section-pad">
+      <!-- .prose styles the long-form text. .reveal is used for a scroll-in effect if script.js
+        adds the "visible" class when this element enters view.-->
+      <div class="prose reveal">
+        <p class="eyebrow">
+          The Rooted Robin story
+        </p>
+        <h2>Beauty with deeper roots</h2>
+        <p>
+          The Rooted Robin began with a simple belief: the things
+          that bring beauty and comfort into our lives should not
+          come at the expense of our health. Here, natural self-care
+          and handmade jewelry are created with thoughtfulness,
+          curiosity, and genuine care.
+        </p>
+        <p>
+          Inspired by forests, flowers, herbs, and the small details
+          found along a woodland path, each piece is made to feel a
+          little magical while remaining honest and approachable.
+          Whether it is a soothing self-care ritual or jewelry made
+          to carry a personal meaning, every creation celebrates
+          individuality and the human touch.
+        </p>
+        <p>
+          Based in Shawano, Wisconsin, The Rooted Robin welcomes
+          direct purchases, wholesale requests, and personal
+          commissions. This is a growing studio, and every customer
+          is part of its story.
+        </p>
+      </div>
+      <!--CSS turns .values-grid into a responsive grid.Each .value is an individual card. The .reveal class
+        may connect each card to the scroll animation in JS. -->
+      <div class="values-grid">
+        <article class="value reveal">
+          <p class="eyebrow">01</p>
+          <h3>Natural-minded</h3>
+          <p>
+            Thoughtful materials and a commitment to self-care
+            that respects your well-being.
+          </p>
+        </article>
+        <article class="value reveal">
+          <p class="eyebrow">02</p>
+          <h3>Made by hand</h3>
+          <p>
+            Small-batch pieces shaped with attention,
+            patience, and creative intention.
+          </p>
+        </article>
+        <article class="value reveal">
+          <p class="eyebrow">03</p>
+          <h3>Within reach</h3>
+          <p>
+            Quality jewelry and beautiful goods offered
+            at fair, approachable prices.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <!-- Shared footer. Its layout, colors, and links are styled by .site-footer and related rules in CSS/style.css.
+    Keep the same contact details across all pages. -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark">❧</span>
+      <strong>The Rooted Robin</strong>
+      <p>
+        Natural goods & handmade jewelry<br>
+        Shawano, Wisconsin
+      </p>
+    </div>
+    <!-- Links to the corresponding pages of the website. -->
+    <div>
+      <h2>Explore</h2>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div>
+      <h2>Connect</h2>
+      <!-- Opens the visitor's email app with the address filled in. -->
+      <a href="mailto:contactmiha@proton.me">
+        contactmiha@proton.me
+      </a>
+      <!-- Starts a phone call on devices that support calling. -->
+      <a href="tel:+12243866089">
+        224-386-6089
+      </a>
+      <!-- Opens Instagram in a new tab. Replace this general
+        Instagram URL with the business's profile URL when ready. -->
+      <a
+        href="https://instagram.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Instagram
+      </a>
+    </div>
+    <!-- script.js can insert the current year into [data-year].
+      Without that JavaScript, the year space stays empty. -->
+    <p class="copyright">
+      © <span data-year></span> The Rooted Robin.
+      Handcrafted with care.
+    </p>
+  </footer>
+</body>
+</html>

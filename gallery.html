@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- =========================================
+       BASIC PAGE SETUP
+       =========================================
+       Sets the character encoding and makes the
+       page responsive on phones and tablets.
+  ========================================== -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Description used by search engines and browsers -->
+  <meta
+    name="description"
+    content="Gallery of handcrafted work from The Rooted Robin."
+  >
+
+  <title>Gallery | The Rooted Robin</title>
+
+  <!-- =========================================
+       GOOGLE FONTS
+       =========================================
+       Loads the fonts used throughout the website:
+       - Cormorant Garamond
+       - Montserrat
+       - Parisienne
+
+       CSS/style.css assigns these fonts to headings,
+       body text, branding, and decorative elements.
+  ========================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- =========================================
+       MAIN CSS FILE
+       =========================================
+       Connects this page to:
+       CSS/style.css
+
+       The CSS file controls the appearance of:
+       - Header and navigation
+       - Page hero
+       - Gallery filter buttons
+       - Gallery grid
+       - Gallery items
+       - Reveal animations
+       - Footer
+       - Responsive/mobile layout
+  ========================================== -->
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- =========================================
+       MAIN JAVASCRIPT FILE
+       =========================================
+       Connects this page to:
+       js/script.js
+
+       JavaScript handles:
+       - Mobile navigation menu
+       - Automatic copyright year
+       - Scroll/reveal animations
+       - Gallery filtering
+
+       "defer" waits until the HTML is loaded before
+       running the JavaScript.
+  ========================================== -->
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- =========================================
+       ACCESSIBILITY: SKIP LINK
+       =========================================
+       Allows keyboard and screen-reader users to
+       skip directly to the main page content.
+
+       CSS:
+       .skip-link
+
+       Connects to:
+       <main id="main">
+  ========================================== -->
+  <a class="skip-link" href="#main">
+    Skip to content
+  </a>
+
+  <!-- =========================================
+       SITE HEADER
+       =========================================
+       This header is shared across the website.
+
+       CSS:
+       .site-header
+       .brand
+       .brand-mark
+       .menu-button
+       .main-nav
+       .active
+       .nav-cta
+
+       JavaScript:
+       .menu-button and .main-nav are used by
+       js/script.js for the mobile navigation menu.
+  ========================================== -->
+  <header class="site-header">
+
+    <!-- Logo/brand links back to index.html -->
+    <a class="brand" href="index.html">
+
+      <span class="brand-mark">❧</span>
+
+      <span>
+        <strong>The Rooted Robin</strong>
+        <small>Natural • Handcrafted • Rooted</small>
+      </span>
+
+    </a>
+
+    <!-- =======================================
+         MOBILE MENU BUTTON
+         =======================================
+         JavaScript listens for clicks on
+         .menu-button and opens/closes .main-nav.
+
+         aria-expanded begins as false and is
+         updated by JavaScript when the menu
+         opens or closes.
+    ======================================== -->
+    <button
+      class="menu-button"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
+      Menu
+    </button>
+
+    <!-- =========================================
+         MAIN NAVIGATION
+         =========================================
+         Links the main HTML pages together.
+
+         index.html    = Home
+         about.html    = About
+         products.html = Products
+         gallery.html  = Gallery
+         contact.html  = Contact
+
+         CSS:
+         .main-nav
+         .active
+         .nav-cta
+
+         "active" identifies Gallery as the
+         page currently being viewed.
+
+         .nav-cta gives the Contact link its
+         call-to-action styling.
+    ========================================== -->
+    <nav
+      id="main-navigation"
+      class="main-nav"
+      aria-label="Main navigation"
+    >
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+
+      <!-- Current page -->
+      <a class="active" href="gallery.html">
+        Gallery
+      </a>
+
+      <a class="nav-cta" href="contact.html">
+        Contact
+      </a>
+
+    </nav>
+
+  </header>
+
+  <!-- =========================================
+       MAIN PAGE CONTENT
+       =========================================
+       id="main" connects to the Skip to Content
+       link at the top of the page.
+  ========================================== -->
+  <main id="main">
+
+    <!-- =========================================
+         GALLERY PAGE HERO
+         =========================================
+         Introductory section for the Gallery page.
+
+         CSS:
+         .page-hero
+         .eyebrow
+    ========================================== -->
+    <section class="page-hero">
+
+      <div>
+
+        <p class="eyebrow">
+          From the workbench
+        </p>
+
+        <h1>The Gallery</h1>
+
+        <p>
+          A growing collection of natural goods, jewelry,
+          and one-of-a-kind commissions.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================
+         GALLERY CONTENT SECTION
+         =========================================
+         Contains:
+         1. Gallery filter buttons
+         2. Gallery items
+         3. Gallery note
+
+         CSS:
+         .content-section
+         .section-pad
+
+         These classes control the section width,
+         spacing, and overall layout.
+    ========================================== -->
+    <section class="content-section section-pad">
+
+      <!-- =======================================
+           GALLERY FILTER BUTTONS
+           =======================================
+           Visitors can filter the gallery by:
+           - All work
+           - Self-care
+           - Jewelry
+           - Commissions
+
+           CSS:
+           .filters
+           .filter
+           .active
+
+           JavaScript:
+           js/script.js reads the data-filter
+           attribute on each button.
+
+           It compares data-filter with the
+           data-category value on each gallery item.
+
+           Example:
+           data-filter="jewelry"
+                    ↓
+           data-category="jewelry"
+
+           When they match, that gallery item
+           remains visible.
+      ======================================== -->
+      <div
+        class="filters"
+        aria-label="Gallery filters"
+      >
+
+        <!--
+          Shows every gallery item.
+
+          JavaScript:
+          data-filter="all"
+
+          CSS:
+          .active identifies this as the
+          currently selected filter when the
+          page first loads.
+        -->
+        <button
+          class="filter active"
+          data-filter="all"
+        >
+          All work
+        </button>
+
+        <!--
+          Shows items where:
+          data-category="care"
+        -->
+        <button
+          class="filter"
+          data-filter="care"
+        >
+          Self-care
+        </button>
+
+        <!--
+          Shows items where:
+          data-category="jewelry"
+        -->
+        <button
+          class="filter"
+          data-filter="jewelry"
+        >
+          Jewelry
+        </button>
+
+        <!--
+          Shows items where:
+          data-category="custom"
+        -->
+        <button
+          class="filter"
+          data-filter="custom"
+        >
+          Commissions
+        </button>
+
+      </div>
+
+      <!-- =========================================
+           GALLERY GRID
+           =========================================
+           Contains all gallery items.
+
+           CSS:
+           .gallery-grid
+
+           CSS creates the grid layout and controls
+           the number and size of columns.
+
+           Responsive CSS can change the number of
+           columns on tablets and phones.
+      ========================================== -->
+      <div class="gallery-grid">
+
+        <!-- =====================================
+             SELF-CARE GALLERY ITEM
+             =====================================
+             CSS:
+             .gallery-item
+             .reveal
+
+             JavaScript:
+             data-category="care" connects this
+             item to the Self-care filter.
+
+             .reveal is also used by script.js
+             for the scroll animation.
+        ====================================== -->
+        <div
+          class="gallery-item reveal"
+          data-category="care"
+        >
+          <span>Self-care</span>
+        </div>
+
+        <!-- =====================================
+             JEWELRY GALLERY ITEM
+
+             JavaScript connection:
+             data-category="jewelry"
+             matches data-filter="jewelry".
+        ====================================== -->
+        <div
+          class="gallery-item reveal"
+          data-category="jewelry"
+        >
+          <span>Jewelry</span>
+        </div>
+
+        <!-- =====================================
+             COMMISSION GALLERY ITEM
+
+             JavaScript connection:
+             data-category="custom"
+             matches data-filter="custom".
+        ====================================== -->
+        <div
+          class="gallery-item reveal"
+          data-category="custom"
+        >
+          <span>Commission</span>
+        </div>
+
+        <!-- JEWELRY ITEM -->
+        <div
+          class="gallery-item reveal"
+          data-category="jewelry"
+        >
+          <span>Jewelry</span>
+        </div>
+
+        <!-- SELF-CARE ITEM -->
+        <div
+          class="gallery-item reveal"
+          data-category="care"
+        >
+          <span>Self-care</span>
+        </div>
+
+        <!-- COMMISSION ITEM -->
+        <div
+          class="gallery-item reveal"
+          data-category="custom"
+        >
+          <span>Commission</span>
+        </div>
+
+        <!-- SELF-CARE ITEM -->
+        <div
+          class="gallery-item reveal"
+          data-category="care"
+        >
+          <span>Self-care</span>
+        </div>
+
+        <!-- JEWELRY ITEM -->
+        <div
+          class="gallery-item reveal"
+          data-category="jewelry"
+        >
+          <span>Jewelry</span>
+        </div>
+
+        <!-- COMMISSION ITEM -->
+        <div
+          class="gallery-item reveal"
+          data-category="custom"
+        >
+          <span>Commission</span>
+        </div>
+
+      </div>
+
+      <!-- =========================================
+           GALLERY NOTE
+           =========================================
+           Placeholder message explaining that
+           actual product photographs can be added.
+
+           CSS:
+           .gallery-note
+
+           When photographs are available, the
+           .gallery-item sections above can be
+           updated to include <img> elements.
+      ========================================== -->
+      <p class="gallery-note">
+        Product photographs can be added here as the collection grows.
+      </p>
+
+    </section>
+
+  </main>
+
+  <!-- =========================================
+       SITE FOOTER
+       =========================================
+       Shared footer used across the website.
+
+       CSS:
+       .site-footer
+       .footer-brand
+       .brand-mark
+       .copyright
+
+       JavaScript:
+       <span data-year></span> is automatically
+       filled with the current year by script.js.
+  ========================================== -->
+  <footer class="site-footer">
+
+    <!-- FOOTER BRAND -->
+    <div class="footer-brand">
+
+      <span class="brand-mark">❧</span>
+
+      <strong>The Rooted Robin</strong>
+
+      <p>
+        Natural goods & handmade jewelry<br>
+        Shawano, Wisconsin
+      </p>
+
+    </div>
+
+    <!-- =======================================
+         FOOTER PAGE LINKS
+         =======================================
+         Connects this page to:
+
+         about.html
+         products.html
+         gallery.html
+    ======================================== -->
+    <div>
+
+      <h2>Explore</h2>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="products.html">
+        Products
+      </a>
+
+      <a href="gallery.html">
+        Gallery
+      </a>
+
+    </div>
+
+    <!-- =======================================
+         FOOTER CONTACT LINKS
+         =======================================
+         Email:
+         mailto: opens the visitor's email app.
+
+         Phone:
+         tel: opens the phone/dialer on supported
+         devices.
+
+         Instagram:
+         Opens in a new browser tab.
+    ======================================== -->
+    <div>
+
+      <h2>Connect</h2>
+
+      <a href="mailto:contactmiha@proton.me">
+        contactmiha@proton.me
+      </a>
+
+      <a href="tel:+12243866089">
+        224-386-6089
+      </a>
+
+      <a
+        href="https://instagram.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Instagram
+      </a>
+
+    </div>
+
+    <!-- =======================================
+         COPYRIGHT
+         =======================================
+         JavaScript finds the data-year attribute
+         and automatically inserts the current year.
+
+         HTML:
+         <span data-year></span>
+
+         JavaScript:
+         js/script.js
+
+         CSS:
+         .copyright
+
+         Example result:
+         © 2026 The Rooted Robin.
+         Handcrafted with care.
+    ======================================== -->
+    <p class="copyright">
+      © <span data-year></span> The Rooted Robin.
+      Handcrafted with care.
+    </p>
+
+  </footer>
+
+</body>
+</html>

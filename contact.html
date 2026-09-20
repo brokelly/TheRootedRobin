@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- =========================================
+       BASIC PAGE SETUP
+       =========================================
+       Sets the character encoding and makes the
+       page responsive on phones and tablets.
+  ========================================== -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Description used by search engines and browsers -->
+  <meta
+    name="description"
+    content="Contact The Rooted Robin for purchases, bulk orders, and custom commissions."
+  >
+  <title>Contact | The Rooted Robin</title>
+  <!-- =========================================
+       GOOGLE FONTS
+       =========================================
+       Loads the fonts used throughout the website:
+       - Cormorant Garamond
+       - Montserrat
+       - Parisienne
+       CSS/style.css assigns these fonts to headings,
+       body text, branding, and decorative elements.
+  ========================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
+    rel="stylesheet"
+  >
+  <!-- =========================================
+       MAIN CSS FILE
+  ========================================== -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- =========================================
+       MAIN JAVASCRIPT FILE
+  ========================================== -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- =========================================
+       ACCESSIBILITY: SKIP LINK
+       =========================================
+       CSS:
+       .skip-link
+       Connects to:
+       <main id="main">
+  ========================================== -->
+  <a class="skip-link" href="#main">
+    Skip to content
+  </a>
+
+  <!-- =========================================
+       SITE HEADER
+       =========================================
+       This header is shared across the website.
+
+       CSS:
+       .site-header
+       .brand
+       .brand-mark
+       .menu-button
+       .main-nav
+       .nav-cta
+       .active
+
+       JavaScript:
+       .menu-button and .main-nav are used by
+       js/script.js for the mobile navigation menu.
+  ========================================== -->
+  <header class="site-header">
+
+    <!-- Logo/brand links back to index.html -->
+    <a class="brand" href="index.html">
+      <span class="brand-mark">❧</span>
+
+      <span>
+        <strong>The Rooted Robin</strong>
+        <small>Natural • Handcrafted • Rooted</small>
+      </span>
+    </a>
+
+    <!--
+      MOBILE MENU BUTTON
+
+      JavaScript listens for clicks on .menu-button
+      and opens/closes .main-nav.
+
+      aria-expanded is also updated by JavaScript
+      to indicate whether the menu is open.
+    -->
+    <button
+      class="menu-button"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
+      Menu
+    </button>
+
+    <!-- =========================================
+         MAIN NAVIGATION
+         =========================================
+         Links all main HTML pages together.
+
+         index.html    = Home
+         about.html    = About
+         products.html = Products
+         gallery.html  = Gallery
+         contact.html  = Contact
+
+         CSS:
+         .main-nav
+         .nav-cta
+         .active
+
+         "active" shows that Contact is the
+         current page.
+    ========================================== -->
+    <nav
+      id="main-navigation"
+      class="main-nav"
+      aria-label="Main navigation"
+    >
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="nav-cta active" href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- =========================================
+       MAIN PAGE CONTENT
+       =========================================
+       id="main" connects to the skip link above.
+  ========================================== -->
+  <main id="main">
+
+    <!-- =========================================
+         CONTACT PAGE HERO
+         =========================================
+         Introductory section for the Contact page.
+
+         CSS:
+         .page-hero
+         .eyebrow
+    ========================================== -->
+    <section class="page-hero">
+      <div>
+
+        <p class="eyebrow">
+          Let’s make something meaningful
+        </p>
+
+        <h1>Contact & Commissions</h1>
+
+        <p>
+          Reach out for direct purchases, bulk product requests,
+          custom jewelry, or personal art projects.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- =========================================
+         CONTACT SECTION
+         =========================================
+         Creates the two-column contact area containing:
+         1. Contact information
+         2. Commission request form
+
+         CSS:
+         .content-section
+         .section-pad
+         .contact-layout
+
+         Responsive CSS changes this layout on
+         smaller screens.
+    ========================================== -->
+    <section class="content-section section-pad contact-layout">
+
+      <!-- =======================================
+           CONTACT INFORMATION
+           =======================================
+           Displays email, phone, and location.
+
+           CSS:
+           .contact-details
+           .reveal
+           .eyebrow
+
+           JavaScript:
+           .reveal is used by script.js to animate
+           the section as it enters the viewport.
+      ======================================== -->
+      <aside class="contact-details reveal">
+
+        <p class="eyebrow">
+          Get in touch
+        </p>
+
+        <h2>
+          From an idea to something made by hand.
+        </h2>
+
+        <p>
+          Share as much detail as you can. You will receive a
+          personal response about availability, timing, and pricing.
+        </p>
+
+        <!-- Opens the visitor's default email application -->
+        <p>
+          <strong>Email</strong><br>
+          <a href="mailto:contactmiha@proton.me">
+            contactmiha@proton.me
+          </a>
+        </p>
+
+        <!-- Opens the phone/dialer on supported devices -->
+        <p>
+          <strong>Phone</strong><br>
+          <a href="tel:+12243866089">
+            224-386-6089
+          </a>
+        </p>
+
+        <p>
+          <strong>Location</strong><br>
+          Shawano, Wisconsin
+        </p>
+
+      </aside>
+
+      <!-- =======================================
+           COMMISSION REQUEST FORM
+           =======================================
+           CSS:
+           .contact-form
+           .form-field
+           .full
+           .button
+           .button-primary
+           .form-message
+           .reveal
+
+           JavaScript:
+           #commission-form is used by script.js.
+
+           When submitted, JavaScript collects the
+           entered information and creates an email
+           request for the visitor.
+
+           The form does NOT store information in
+           a database or on the website.
+      ======================================== -->
+      <form
+        id="commission-form"
+        class="contact-form reveal"
+      >
+
+        <!-- NAME FIELD -->
+        <div class="form-field">
+
+          <label for="name">
+            Name *
+          </label>
+
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+          >
+
+        </div>
+
+        <!-- EMAIL OR PHONE FIELD -->
+        <div class="form-field">
+
+          <label for="contact">
+            Email or phone *
+          </label>
+
+          <input
+            id="contact"
+            name="contact"
+            type="text"
+            required
+          >
+
+        </div>
+
+        <!-- =====================================
+             REQUEST TYPE
+             =====================================
+             Allows the visitor to choose what
+             type of product/service they want.
+        ====================================== -->
+        <div class="form-field">
+
+          <label for="requestType">
+            Request type *
+          </label>
+
+          <select
+            id="requestType"
+            name="requestType"
+            required
+          >
+
+            <option value="">
+              Choose one
+            </option>
+
+            <option value="Direct product purchase">
+              Direct product purchase
+            </option>
+
+            <option value="Bulk product request">
+              Bulk product request
+            </option>
+
+            <option value="Custom jewelry">
+              Custom jewelry
+            </option>
+
+            <option value="Personal art project">
+              Personal art project
+            </option>
+
+            <option value="Other">
+              Other
+            </option>
+
+          </select>
+
+        </div>
+
+        <!-- DESIRED DATE FIELD -->
+        <div class="form-field">
+
+          <label for="date">
+            Date desired
+          </label>
+
+          <input
+            id="date"
+            name="date"
+            type="date"
+          >
+
+        </div>
+
+        <!-- =====================================
+             BUDGET FIELD
+             =====================================
+             .full tells the CSS that this field
+             should span the full form width.
+        ====================================== -->
+        <div class="form-field full">
+
+          <label for="rate">
+            Budget or rate range
+          </label>
+
+          <input
+            id="rate"
+            name="rate"
+            type="text"
+            placeholder="Optional"
+          >
+
+        </div>
+
+        <!-- =====================================
+             PROJECT DESCRIPTION
+             =====================================
+             Also uses .full so the textarea spans
+             the full width of the form.
+        ====================================== -->
+        <div class="form-field full">
+
+          <label for="description">
+            Project description *
+          </label>
+
+          <textarea
+            id="description"
+            name="description"
+            required
+            placeholder="Tell me about the product, quantity, materials, colors, size, or personal meaning you have in mind."
+          ></textarea>
+
+        </div>
+
+        <!-- =====================================
+             FORM SUBMIT BUTTON
+             =====================================
+             CSS:
+             .button
+             .button-primary
+
+             JavaScript:
+             Submitting #commission-form triggers
+             the form code inside js/script.js.
+
+             JavaScript uses the entered form
+             information to create an email request.
+        ====================================== -->
+        <button
+          class="button button-primary"
+          type="submit"
+        >
+          Create email request
+        </button>
+
+        <!--
+          aria-live="polite" allows screen readers
+          to announce updated form messages without
+          interrupting the user.
+        -->
+        <p
+          class="form-message"
+          aria-live="polite"
+        >
+          This button opens your email app with the completed
+          request. No information is stored on this website.
+        </p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- =========================================
+       SITE FOOTER
+       =========================================
+       Shared footer used across the website.
+
+       CSS:
+       .site-footer
+       .footer-brand
+       .brand-mark
+       .copyright
+
+       JavaScript:
+       <span data-year></span> is automatically
+       filled with the current year by script.js.
+  ========================================== -->
+  <footer class="site-footer">
+
+    <!-- FOOTER BRAND -->
+    <div class="footer-brand">
+
+      <span class="brand-mark">❧</span>
+
+      <strong>The Rooted Robin</strong>
+
+      <p>
+        Natural goods & handmade jewelry<br>
+        Shawano, Wisconsin
+      </p>
+
+    </div>
+
+    <!-- =======================================
+         FOOTER PAGE LINKS
+         =======================================
+         Connects to other HTML pages:
+         about.html
+         products.html
+         gallery.html
+    ======================================== -->
+    <div>
+
+      <h2>Explore</h2>
+
+      <a hr

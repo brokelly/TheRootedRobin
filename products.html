@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- =========================================
+       BASIC PAGE SETUP
+       =========================================
+       Sets the character encoding and makes the
+       page responsive on phones and tablets.
+  ========================================== -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--
+    Description used by search engines to explain
+    what visitors can find on the Products page.
+  -->
+  <meta
+    name="description"
+    content="Explore natural self-care goods and handmade jewelry from The Rooted Robin."
+  >
+
+  <title>Products | The Rooted Robin</title>
+
+  <!-- =========================================
+       GOOGLE FONTS
+       =========================================
+       Loads the fonts used throughout the website:
+       - Cormorant Garamond
+       - Montserrat
+       - Parisienne
+
+       CSS/style.css assigns these fonts to headings,
+       body text, branding, buttons, and decorative
+       elements throughout the website.
+  ========================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- =========================================
+       MAIN CSS FILE
+       =========================================
+       Connects this page to:
+       CSS/style.css
+
+       The CSS file controls the appearance of:
+       - Header and navigation
+       - Page hero
+       - Product sections
+       - Product grid
+       - Product cards
+       - Product image placeholders
+       - Pricing text
+       - Notice box
+       - Commission call-to-action
+       - Buttons
+       - Footer
+       - Reveal animations
+       - Responsive/mobile layout
+  ========================================== -->
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- =========================================
+       MAIN JAVASCRIPT FILE
+       =========================================
+       Connects this page to:
+       js/script.js
+
+       JavaScript handles:
+       - Mobile navigation menu
+       - Automatic copyright year
+       - Scroll/reveal animations
+
+       The same JavaScript file is also shared with
+       other pages for features such as gallery
+       filtering and the commission request form.
+
+       "defer" waits until the HTML has loaded
+       before running the JavaScript.
+  ========================================== -->
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- =========================================
+       ACCESSIBILITY: SKIP LINK
+       =========================================
+       Allows keyboard and screen-reader users to
+       skip the navigation and move directly to
+       the main page content.
+
+       CSS:
+       .skip-link
+
+       Connects to:
+       <main id="main">
+  ========================================== -->
+  <a class="skip-link" href="#main">
+    Skip to content
+  </a>
+
+  <!-- =========================================
+       SITE HEADER
+       =========================================
+       Shared header used throughout the website.
+
+       CSS:
+       .site-header
+       .brand
+       .brand-mark
+       .menu-button
+       .main-nav
+       .active
+       .nav-cta
+
+       JavaScript:
+       .menu-button and .main-nav are used by
+       js/script.js for the mobile navigation menu.
+  ========================================== -->
+  <header class="site-header">
+
+    <!-- =======================================
+         WEBSITE BRAND
+         =======================================
+         Clicking the brand returns the visitor
+         to the Home page:
+
+         index.html
+
+         CSS:
+         .brand
+         .brand-mark
+    ======================================== -->
+    <a class="brand" href="index.html">
+
+      <span class="brand-mark">❧</span>
+
+      <span>
+        <strong>The Rooted Robin</strong>
+        <small>Natural • Handcrafted • Rooted</small>
+      </spa

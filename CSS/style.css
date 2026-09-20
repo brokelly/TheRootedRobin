@@ -940,7 +940,7 @@ img {
 .gallery-grid {
   display: grid;
   grid-template-columns:
-    repeat(3, 1zr);
+    repeat(3, 1fr);
   gap: 1rem;
 }
 /* Alternates placeholder colors */
@@ -1336,6 +1336,37 @@ img {
     1px solid rgba(184, 138, 59, 0.45);
 }
 
+
+/* =========================================================
+           MATCHING GOLD OFFSET BOXES ACROSS THE SITE
+   index.html: category cards, artisan art, newsletter
+   about.html: values and prose
+   products.html: cards, notice, commission call to action
+   gallery.html: gallery items
+   contact.html: details and form
+========================================================= */
+.category-card,
+.value,
+.prose,
+.product-card,
+.notice,
+.product-cta,
+.gallery-item,
+.contact-details,
+.contact-form,
+.newsletter,
+.artisan-art {
+  border-color: rgba(184, 138, 59, 0.75);
+  box-shadow: 14px 14px 0 rgba(184, 138, 59, 0.55);
+}
+
+.category-card:hover,
+.product-card:hover,
+.gallery-item:hover {
+  border-color: var(--gold);
+  box-shadow: 18px 18px 0 rgba(184, 138, 59, 0.65);
+}
+
 /* =========================================================
                       TABLET DESIGN
 ========================================================= */
@@ -1487,6 +1518,30 @@ img {
   /* ---------- Footer ---------- */
   .site-footer {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Keep the matching gold boxes at comfortable offsets on smaller screens.
+   These rules follow PHONE DESIGN so its artisan shadow stays gold. */
+@media (max-width: 850px) {
+  .category-card, .value, .prose, .product-card, .notice,
+  .product-cta, .gallery-item, .contact-details, .contact-form,
+  .newsletter, .artisan-art {
+    box-shadow: 10px 10px 0 rgba(184, 138, 59, 0.55);
+  }
+  .category-card:hover, .product-card:hover, .gallery-item:hover {
+    box-shadow: 13px 13px 0 rgba(184, 138, 59, 0.65);
+  }
+}
+
+@media (max-width: 560px) {
+  .category-card, .value, .prose, .product-card, .notice,
+  .product-cta, .gallery-item, .contact-details, .contact-form,
+  .newsletter, .artisan-art {
+    box-shadow: 7px 7px 0 rgba(184, 138, 59, 0.55);
+  }
+  .category-card:hover, .product-card:hover, .gallery-item:hover {
+    box-shadow: 9px 9px 0 rgba(184, 138, 59, 0.65);
   }
 }
 

@@ -39,10 +39,10 @@ body {
   /* Cream overlay */
   background-image:
     linear-gradient(
-      rgba(247, 241, 229, 0.25),
-      rgba(247, 241, 229, 0.25)
+      rgba(247, 241, 229, 0.80),
+      rgba(247, 241, 229, 0.80)
     ),
-    url("../img/background2.jpg");
+    url("../img/background1.jpg");
   /* image cover the entire window */
   background-size: cover;
   /* image centered */

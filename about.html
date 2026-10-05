@@ -1,38 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- character encoding -->
     <meta charset="utf-8" />
-    <!-- layout scale -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Description for search engines -->
     <meta
       name="description"
       content="Meet the artisan behind The Rooted Robin."
     />
-    <!-- browser tab -->
     <title>From the Artisan | The Rooted Robin</title>
-    <!-- Google Fonts, also in CSS through the site's font variables -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
       rel="stylesheet"
     />
-    <!-- Connects css -->
     <link rel="stylesheet" href="CSS/style.css" />
-    <!-- Connects JS -->
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <!-- Accessibility link takes keyboard users directly to
-  <main id="main"> skip-link is styled in CSS -->
+<!-- =========================================================
+                    SKIP TO CONTENT LINK
+========================================================= -->
     <a class="skip-link" href="#main">Skip to content</a>
-    <!-- Shared site header. .site-header, .brand, .brand-mark,
-  .menu-button, and .main-nav are styled in CSS.
-  Keep this header consistent across your HTML pages -->
+<!-- =========================================================
+                    HEADER
+========================================================= -->
     <header class="site-header">
-      <!-- Clicking the logo/name opens index.html, the home page. -->
+<!-- =========================================================
+                    WEBSITE BRAND
+========================================================= -->
       <a class="brand" href="index.html" aria-label="The Rooted Robin home">
         <span class="brand-mark" aria-hidden="true">❧</span>
         <span>
@@ -40,10 +36,9 @@
           <small>Natural • Handcrafted • Rooted</small>
         </span>
       </a>
-      <!-- Mobile menu button. CSS displays it on smaller screens.
-    JS toggle the navigation menu and update aria-expanded between "false" and "true".
-    aria-controls points to the navigation element whose id is "main-navigation" below.
-  -->
+<!-- =========================================================
+                    MOBILE MENU BUTTON
+========================================================= -->
       <button
         class="menu-button"
         aria-expanded="false"
@@ -51,9 +46,9 @@
       >
         Menu
       </button>
-      <!-- Shared navigation. Each href connects to another HTML page.
-The "active" class marks About as the current page.
-On mobile, JavaScript may add/remove an "open" class here.-->
+<!-- =========================================================
+                    MAIN NAVIGATION
+========================================================= -->
       <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a class="active" href="about.html">About</a>
@@ -62,80 +57,108 @@ On mobile, JavaScript may add/remove an "open" class here.-->
         <a class="nav-cta" href="contact.html">Contact</a>
       </nav>
     </header>
-    <!-- Destination of the Skip to content link at the top. -->
+<!-- =========================================================
+                    MAIN PAGE CONTENT
+========================================================= -->
     <main id="main">
-      <!-- Inner-page banner. .page-hero and .eyebrow are styled
-  in CSS. Other inner pages may reuse .page-hero -->
+<!-- =========================================================
+                    ABOUT PAGE HERO
+========================================================= -->
       <section class="page-hero">
         <div>
           <p class="eyebrow">The hands behind the work</p>
           <h1>From the Artisan</h1>
           <p>
-            A love letter to natural materials, slow creation, and the wild
-            beauty of Wisconsin's Northwoods.
+            A love letter to nature, the art of slow creation,
+            and the wild beauty of Wisconsin's Northwoods-thoughtfully
+            handcrafted and deeply rooted, from me to you.
           </p>
         </div>
       </section>
-      <!-- .content-section sets the content width..section-pad adds spacing around the section.
-  Both classes come from CSS/style.css. -->
+<!-- =========================================================
+                    ROOTED ROBIN STORY
+========================================================= -->
       <section class="content-section section-pad">
-        <!-- .prose styles the long-form text. .reveal is used for a scroll-in effect if script.js
-    adds the "visible" class when this element enters view.-->
         <div class="prose reveal">
           <p class="eyebrow">The Rooted Robin story</p>
           <h2>Beauty with deeper roots</h2>
           <p>
-            The Rooted Robin began with a simple belief: the things that bring
-            beauty and comfort into our lives should not come at the expense of
-            our health. Here, natural self-care and handmade jewelry are created
-            with thoughtfulness, curiosity, and genuine care.
+            The Rooted Robin grew from something deeply personal.
           </p>
           <p>
-            Inspired by forests, flowers, herbs, and the small details found
-            along a woodland path, each piece is made to feel a little magical
-            while remaining honest and approachable. Whether it is a soothing
-            self-care ritual or jewelry made to carry a personal meaning, every
-            creation celebrates individuality and the human touch.
+            I'm a woman, a mother of two, a maker, and someone who has walked
+            through seasons that completely changed the way I look at health,
+            home, and the things we surround ourselves with. My own journey through
+            mental health struggles and cancer made me more intentional, not only
+            about caring for myself, but also about the kind of life I wanted to
+            create for my children.
           </p>
           <p>
-            Based in Shawano, Wisconsin, The Rooted Robin welcomes direct
-            purchases, wholesale requests, and personal commissions. This is a
-            growing studio, and every customer is part of its story.
+            I began looking more closely at the everyday things we put on our bodies,
+            bring into our homes, and use to care for ourselves. I wanted simplicity.
+            I wanted beautiful things that felt special without asking me to
+            compromise what mattered most to me: our health.
+          </p>
+          <p>
+            And somewhere along the way, The Rooted Robin began to take root.
+          </p>
+          <p>
+            Inspired by the forests, flowers, herbs, and quiet wildness of
+            Wisconsin's Northwoods, I create handcrafted goods slowly, thoughtfully,
+            and with intention. Some are made to bring a little comfort to an
+            ordinary day. Others are created to carry meaning, tell a story, or
+            simply remind us that there is still beauty to be found in the smallest things.
+          </p>
+          <p>
+            This little business is an extension of the life I'm trying to build,
+            one that is slower, more connected, more intentional, and a little
+            closer to nature.
+          </p>
+          <p>
+            The Rooted Robin is still growing, just as I am. Every batch made,
+            every piece created, and every person who chooses to support my work
+            becomes a small part of this story.
+          </p>
+          <p>
+            From my hands and my little corner of Wisconsin to yours-thank you
+            for being here.
           </p>
         </div>
-        <!--CSS turns .values-grid into a responsive grid.Each .value is an individual card. The .reveal class
-    may connect each card to the scroll animation in JS. -->
+<!-- =========================================================
+                    VALUES SECTION
+========================================================= -->
         <div class="values-grid">
+<!-- =========================================================
+                    VALUE 01
+========================================================= -->
           <article class="value reveal">
             <p class="eyebrow">01</p>
-            <h3>Natural-minded</h3>
+            <h3>Title</h3>
             <p>
-              Thoughtful materials and a commitment to self-care that respects
-              your well-being.
+              .....
             </p>
           </article>
+<!-- =========================================================
+                    VALUE 02
+========================================================= -->
           <article class="value reveal">
             <p class="eyebrow">02</p>
-            <h3>Made by hand</h3>
+            <h3>Made by hand, within reach</h3>
             <p>
-              Small-batch pieces shaped with attention, patience, and creative
-              intention.
-            </p>
-          </article>
-          <article class="value reveal">
-            <p class="eyebrow">03</p>
-            <h3>Within reach</h3>
-            <p>
-              Quality jewelry and beautiful goods offered at fair, approachable
-              prices.
+              Small batch creations shaped with thoughtfulness, patience and
+              creative intention-offered at fair, approachable prices.
             </p>
           </article>
         </div>
       </section>
     </main>
-    <!-- Shared footer. Its layout, colors, and links are styled by .site-footer and related rules in CSS/style.css.
-Keep the same contact details across all pages. -->
+<!-- =========================================================
+                    FOOTER
+========================================================= -->
     <footer class="site-footer">
+<!-- =========================================================
+                    FOOTER BRAND INFORMATION
+========================================================= -->
       <div class="footer-brand">
         <span class="brand-mark">❧</span>
         <strong>The Rooted Robin</strong>
@@ -144,23 +167,29 @@ Keep the same contact details across all pages. -->
           Shawano, Wisconsin
         </p>
       </div>
-      <!-- Links to the corresponding pages of the website. -->
+<!-- =========================================================
+                    FOOTER EXPLORE LINKS
+========================================================= -->
       <div>
         <h2>Explore</h2>
         <a href="about.html">About</a>
         <a href="products.html">Products</a>
         <a href="gallery.html">Gallery</a>
       </div>
+<!-- =========================================================
+                    FOOTER CONTACT INFORMATION
+========================================================= -->
       <div>
         <h2>Connect</h2>
-
-        <!-- Email -->
-        <a href="mailto:contactmiha@proton.me"> contactmiha@proton.me </a>
-
-        <!-- Phone -->
-        <a href="tel:+12243866089"> 224-386-6089 </a>
-
-        <!-- Instagram Follow Me Button -->
+        <a href="mailto:contactmiha@proton.me">
+          contactmiha@proton.me
+        </a>
+        <a href="tel:+12243866089">
+          224-386-6089
+        </a>
+<!-- =========================================================
+                    INSTAGRAM FOLLOW BUTTON
+========================================================= -->
         <a
           href="https://www.instagram.com/the.rooted.robin/"
           target="_blank"
@@ -174,12 +203,12 @@ Keep the same contact details across all pages. -->
               <span class="instagram-dot"></span>
             </span>
           </span>
-
           <span class="instagram-text">FOLLOW ME</span>
         </a>
       </div>
-      <!-- script.js can insert the current year into [data-year].
-Without that JavaScript, the year space stays empty. -->
+<!-- =========================================================
+                    COPYRIGHT
+========================================================= -->
       <p class="copyright">
         © <span data-year></span> The Rooted Robin. Handcrafted with care.
       </p>

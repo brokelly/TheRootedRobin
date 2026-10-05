@@ -3,57 +3,42 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <meta
       name="description"
-      content="Shop handcrafted face care, bath and body products, lipcare, apothecary goods, and perfume from The Rooted Robin."
+      content="Shop handcrafted face care, bath and body products, lipcare, health and wellness goods, and perfume from The Rooted Robin."
     />
-
     <title>Products | The Rooted Robin</title>
-
-    <!-- =========================================
-  GOOGLE FONTS
-  ========================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
       rel="stylesheet"
     />
-
-    <!-- =========================================
-  MAIN CSS
-  ========================================== -->
     <link rel="stylesheet" href="CSS/style.css" />
-
-    <!-- =========================================
-  MAIN JAVASCRIPT
-  ========================================== -->
     <script src="js/script.js" defer></script>
   </head>
-
   <body>
-    <!-- =========================================
-  ACCESSIBILITY SKIP LINK
-  ========================================== -->
-    <a class="skip-link" href="#main"> Skip to content </a>
-
-    <!-- =========================================
-  SITE HEADER
-  ========================================== -->
+<!-- =========================================================
+                    SKIP TO CONTENT LINK
+========================================================= -->
+    <a class="skip-link" href="#main">Skip to content</a>
+<!-- =========================================================
+                    HEADER
+========================================================= -->
     <header class="site-header">
-      <!-- WEBSITE BRAND -->
+<!-- =========================================================
+                    WEBSITE BRAND
+========================================================= -->
       <a class="brand" href="index.html">
         <span class="brand-mark">❧</span>
-
         <span>
           <strong>The Rooted Robin</strong>
           <small>Natural • Handcrafted • Rooted</small>
         </span>
       </a>
-
-      <!-- MOBILE MENU BUTTON -->
+<!-- =========================================================
+                    MOBILE MENU BUTTON
+========================================================= -->
       <button
         class="menu-button"
         aria-expanded="false"
@@ -61,53 +46,51 @@
       >
         Menu
       </button>
-
-      <!-- MAIN NAVIGATION -->
-      <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
-        <a href="index.html"> Home </a>
-
-        <a href="about.html"> About </a>
-
-        <a class="active" href="products.html"> Products </a>
-
-        <a href="gallery.html"> Gallery </a>
-
-        <a class="nav-cta" href="contact.html"> Contact </a>
+<!-- =========================================================
+                    MAIN NAVIGATION
+========================================================= -->
+      <nav
+        id="main-navigation"
+        class="main-nav"
+        aria-label="Main navigation"
+      >
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
       </nav>
     </header>
-
-    <!-- =========================================
-MAIN PAGE CONTENT
-========================================== -->
+<!-- =========================================================
+                    MAIN PAGE CONTENT
+========================================================= -->
     <main id="main">
-      <!-- =========================================
-  PRODUCTS PAGE HERO
-  ========================================== -->
+<!-- =========================================================
+                    PRODUCTS PAGE HERO
+========================================================= -->
       <section class="page-hero">
         <div>
           <p class="eyebrow">Made by hand</p>
-
           <h1>The Collection</h1>
-
           <p>
             Explore handcrafted botanical goods created for everyday rituals,
             self-care, and a little bit of woodland magic.
           </p>
         </div>
       </section>
-
-      <!-- =========================================
-  PRODUCT SEARCH & FILTERS
-  ========================================== -->
+<!-- =========================================================
+                    PRODUCT SEARCH AND FILTERS
+========================================================= -->
       <section
         class="content-section section-pad product-tools-section"
         aria-label="Search and filter products"
       >
         <div class="product-tools">
-          <!-- SEARCH -->
+<!-- =========================================================
+                    PRODUCT SEARCH
+========================================================= -->
           <div class="product-tool">
-            <label for="product-search"> Search Products </label>
-
+            <label for="product-search">Search Products</label>
             <input
               type="search"
               id="product-search"
@@ -115,67 +98,58 @@ MAIN PAGE CONTENT
               autocomplete="off"
             />
           </div>
-
-          <!-- SECTION FILTER -->
+<!-- =========================================================
+                    SECTION FILTER
+========================================================= -->
           <div class="product-tool">
-            <label for="section-filter"> Section </label>
-
+            <label for="section-filter">Section</label>
             <select id="section-filter">
               <option value="all">All Sections</option>
-
               <option value="face">Face</option>
-
               <option value="bath-body">Bath &amp; Body</option>
-
               <option value="lipcare">Lipcare</option>
-
-              <option value="apothecary">Apothecary</option>
-
+              <option value="health and wellness">Health and Wellness</option>
               <option value="perfume">Perfume</option>
             </select>
           </div>
-
-          <!-- PRICE FILTER -->
+<!-- =========================================================
+                    PRICE FILTER
+========================================================= -->
           <div class="product-tool">
-            <label for="price-filter"> Price </label>
-
+            <label for="price-filter">Price</label>
             <select id="price-filter">
               <option value="all">All Prices</option>
-
               <option value="under-10">Under $10</option>
-
               <option value="10-20">$10 - $19.99</option>
-
               <option value="20-30">$20 - $29.99</option>
-
               <option value="30-plus">$30+</option>
             </select>
           </div>
         </div>
-
-        <!-- NO PRODUCTS MESSAGE -->
+<!-- =========================================================
+                    NO PRODUCTS MESSAGE
+========================================================= -->
         <p id="no-products-message" class="no-products-message" hidden>
           No products match your search. Try changing your search or filters.
         </p>
       </section>
-
-      <!-- ==================================================
-FACE
-=================================================== -->
-      <section id="face" class="content-section section-pad product-section">
+<!-- =========================================================
+                    FACE
+========================================================= -->
+      <section
+        id="face"
+        class="content-section section-pad product-section"
+      >
         <p class="eyebrow">Botanical beauty</p>
-
         <h2>Face</h2>
-
         <p class="section-intro">
           Thoughtfully handcrafted products created to nourish, refresh, and
           care for your skin.
         </p>
-
         <div class="product-grid">
-          <!-- =========================================
-    HOLY GRAIL EXFOLIATOR
-    ========================================== -->
+<!-- =========================================================
+                    HOLY GRAIL EXFOLIATOR
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="face"
@@ -189,14 +163,10 @@ FACE
                 loading="lazy"
               />
             </div>
-
             <div class="product-info">
               <p class="product-category">Face</p>
-
               <h3>Holy Grail Exfoliator</h3>
-
               <p class="price">$18.00</p>
-
               <p>
                 2oz<br />
                 <strong>Description:</strong><br />
@@ -206,125 +176,81 @@ FACE
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-  DEWY MEADOW FACE TONER
-  Two-photo gallery
-  ========================================== -->
+<!-- =========================================================
+                    PRODUCT
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="face"
-            data-price="15.00"
-            data-name="Dewy Meadow Face Toner"
+            data-price="00.00"
+            data-name="PRODUCT"
           >
-            <!-- PRODUCT IMAGE GALLERY -->
-            <div class="product-gallery">
-              <!-- MAIN IMAGE -->
               <div class="product-image">
                 <img
-                  class="main-product-image"
-                  src="img/DewyMeadowFaceTonerSpray.jpg"
-                  alt="Dewy Meadow Face Toner Spray"
+                  src="img/IMG.jpg"
+                  alt="PRODUCT"
                   loading="lazy"
                 />
               </div>
-
-              <!-- THUMBNAILS -->
-              <div class="product-thumbnails">
-                <!-- PHOTO 1 -->
-                <button
-                  type="button"
-                  class="product-thumbnail active"
-                  data-image="img/DewyMeadowFaceTonerSpray.jpg"
-                  aria-label="View first Dewy Meadow Face Toner Spray image"
-                >
-                  <img src="img/DewyMeadowFaceTonerSpray.jpg" alt="" />
-                </button>
-
-                <!-- PHOTO 2 -->
-                <button
-                  type="button"
-                  class="product-thumbnail"
-                  data-image="img/DewyMeadowFaceTonerSpray2.jpg"
-                  aria-label="View second Dewy Meadow Face Toner Spray image"
-                >
-                  <img src="img/DewyMeadowFaceTonerSpray2.jpg" alt="" />
-                </button>
-              </div>
-            </div>
-
             <div class="product-info">
               <p class="product-category">Face</p>
-
-              <h3>Dewy Meadow Face Toner</h3>
-
-              <p class="price">$15.00</p>
-
-              <p>
-                4oz<br />
-                <strong>Description:</strong><br />
-                <strong>Ingredients:</strong>
-                Organic rose-infused witch hazel, filtered water, aloe vera gel,
-                lavender, frankincense &amp; geranium essential oils.
-              </p>
-            </div>
-          </article>
-
-          <!-- =========================================
-FACE PRODUCT 3
-Placeholder until product is added
-========================================== -->
-          <article
-            class="product-card reveal"
-            data-category="face"
-            data-price="0.00"
-            data-name="Product 3"
-          >
-            <div class="product-image">
-              <img
-                src="IMG/products/face/herbal-facial-balm.jpg"
-                alt="Product 3"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="product-info">
-              <p class="product-category">Face</p>
-
-              <h3>Product 3</h3>
-
+              <h3>PRODUCT</h3>
               <p class="price">$00.00</p>
-
               <p>
                 oz<br />
                 <strong>Description:</strong><br />
                 <strong>Ingredients:</strong>
+                ............................
+              </p>
+            </div>
+          </article>
+<!-- =========================================================
+                    FACE PRODUCT
+========================================================= -->
+          <article
+            class="product-card reveal"
+            data-category="face"
+            data-price="0.00"
+            data-name="PRODUCT"
+          >
+            <div class="product-image">
+              <img
+                src="IMG.jpg"
+                alt="PRODUCT"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-info">
+              <p class="product-category">Face</p>
+              <h3>PRODUCT</h3>
+              <p class="price">$00.00</p>
+              <p>
+                oz<br />
+                <strong>Description:</strong><br />
+                <strong>Ingredients:</strong>
+                ..........
               </p>
             </div>
           </article>
         </div>
       </section>
-
-      <!-- ==================================================
-BATH & BODY
-=================================================== -->
+<!-- =========================================================
+                    BATH & BODY
+========================================================= -->
       <section
         id="bath-body"
         class="content-section section-pad product-section"
       >
         <p class="eyebrow">Everyday rituals</p>
-
         <h2>Bath &amp; Body</h2>
-
         <p class="section-intro">
           Handcrafted bath and body favorites made for slow mornings, long
           evenings, and everyday care.
         </p>
-
         <div class="product-grid">
-          <!-- =========================================
-  WILDFLOWER NOURISHING SUGAR SCRUB
-  ========================================== -->
+<!-- =========================================================
+                    WILDFLOWER NOURISHING SUGAR SCRUB
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="bath-body"
@@ -338,14 +264,10 @@ BATH & BODY
                 loading="lazy"
               />
             </div>
-
             <div class="product-info">
               <p class="product-category">Bath &amp; Body</p>
-
               <h3>Wildflower Nourishing Sugar Scrub</h3>
-
               <p class="price">$12.00</p>
-
               <p>
                 8oz<br />
                 <strong>Description:</strong><br />
@@ -355,10 +277,9 @@ BATH & BODY
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-HIBISCUS ROSEMARY NOURISHING SUGAR SCRUB
-========================================== -->
+<!-- =========================================================
+                    HIBISCUS ROSEMARY NOURISHING SUGAR SCRUB
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="bath-body"
@@ -372,14 +293,10 @@ HIBISCUS ROSEMARY NOURISHING SUGAR SCRUB
                 loading="lazy"
               />
             </div>
-
             <div class="product-info">
               <p class="product-category">Bath &amp; Body</p>
-
               <h3>Hibiscus Rosemary Nourishing Sugar Scrub</h3>
-
               <p class="price">$20.00</p>
-
               <p>
                 8oz<br />
                 <strong>Description:</strong><br />
@@ -389,10 +306,9 @@ HIBISCUS ROSEMARY NOURISHING SUGAR SCRUB
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-WOMB OIL
-========================================== -->
+<!-- =========================================================
+                    WOMB OIL
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="bath-body"
@@ -400,16 +316,16 @@ WOMB OIL
             data-name="Womb Oil"
           >
             <div class="product-image">
-              <img src="img/WombOil.jpg" alt="Womb Oil" loading="lazy" />
+              <img
+                src="img/WombOil.jpg"
+                alt="Womb Oil"
+                loading="lazy"
+              />
             </div>
-
             <div class="product-info">
               <p class="product-category">Bath &amp; Body</p>
-
               <h3>Womb Oil</h3>
-
               <p class="price">$12.00 / $18.00</p>
-
               <p>
                 10ml roller / 2oz<br />
                 <strong>Description:</strong><br />
@@ -420,10 +336,9 @@ WOMB OIL
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-WHIPPED TALLOW - FRANKINCENSE & MYRRH
-========================================== -->
+<!-- =========================================================
+                    WHIPPED TALLOW - FRANKINCENSE & MYRRH
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="bath-body"
@@ -437,14 +352,10 @@ WHIPPED TALLOW - FRANKINCENSE & MYRRH
                 loading="lazy"
               />
             </div>
-
             <div class="product-info">
               <p class="product-category">Bath &amp; Body</p>
-
               <h3>Whipped Tallow - Frankincense &amp; Myrrh</h3>
-
               <p class="price">$12.00 / $32.00</p>
-
               <p>
                 2oz / 8oz<br />
                 <strong>Description:</strong><br />
@@ -454,10 +365,9 @@ WHIPPED TALLOW - FRANKINCENSE & MYRRH
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-WHIPPED TALLOW - HERBAL INFUSED
-========================================== -->
+<!-- =========================================================
+                    WHIPPED TALLOW - HERBAL INFUSED
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="bath-body"
@@ -471,14 +381,10 @@ WHIPPED TALLOW - HERBAL INFUSED
                 loading="lazy"
               />
             </div>
-
             <div class="product-info">
               <p class="product-category">Bath &amp; Body</p>
-
               <h3>Whipped Tallow - Herbal Infused</h3>
-
               <p class="price">$12.00 / $32.00</p>
-
               <p>
                 2oz / 8oz<br />
                 <strong>Description:</strong><br />
@@ -488,20 +394,19 @@ WHIPPED TALLOW - HERBAL INFUSED
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-BOTANICAL BATH BOMBS
-Three-photo gallery
-========================================== -->
+<!-- =========================================================
+                    BOTANICAL BATH BOMBS
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="bath-body"
             data-price="4.00"
             data-name="Botanical Bath Bombs"
           >
-            <!-- PRODUCT IMAGE GALLERY -->
+<!-- =========================================================
+                    PRODUCT IMAGE GALLERY
+========================================================= -->
             <div class="product-gallery">
-              <!-- MAIN IMAGE -->
               <div class="product-image">
                 <img
                   class="main-product-image"
@@ -510,10 +415,10 @@ Three-photo gallery
                   loading="lazy"
                 />
               </div>
-
-              <!-- THUMBNAILS -->
+<!-- =========================================================
+                    PRODUCT THUMBNAILS
+========================================================= -->
               <div class="product-thumbnails">
-                <!-- PHOTO 1 -->
                 <button
                   type="button"
                   class="product-thumbnail active"
@@ -522,8 +427,6 @@ Three-photo gallery
                 >
                   <img src="img/BathBomb.jpg" alt="" />
                 </button>
-
-                <!-- PHOTO 2 -->
                 <button
                   type="button"
                   class="product-thumbnail"
@@ -532,8 +435,6 @@ Three-photo gallery
                 >
                   <img src="img/BathBomb2.jpg" alt="" />
                 </button>
-
-                <!-- PHOTO 3 -->
                 <button
                   type="button"
                   class="product-thumbnail"
@@ -544,14 +445,10 @@ Three-photo gallery
                 </button>
               </div>
             </div>
-
             <div class="product-info">
               <p class="product-category">Bath &amp; Body</p>
-
               <h3>Botanical Bath Bombs</h3>
-
               <p class="price">$4.00 Each / 3 for $10.00</p>
-
               <p>
                 Individual<br />
                 <strong>Description:</strong><br />
@@ -564,34 +461,30 @@ Three-photo gallery
           </article>
         </div>
       </section>
-
-      <!-- ==================================================
-LIPCARE
-=================================================== -->
-      <section id="lipcare" class="content-section section-pad product-section">
+<!-- =========================================================
+                    LIPCARE
+========================================================= -->
+      <section
+        id="lipcare"
+        class="content-section section-pad product-section"
+      >
         <p class="eyebrow">Small comforts</p>
-
         <h2>Lipcare</h2>
-
         <p class="section-intro">
           Simple handcrafted lip essentials made for soft, happy lips throughout
           the seasons.
         </p>
-
         <div class="product-grid">
-          <!-- =========================================
-    SPICED VANILLA LIP BALM
-    FIXED: product-gallery is properly closed
-    ========================================== -->
+<!-- =========================================================
+                    SPICED VANILLA LIP BALM
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="lipcare"
             data-price="5.00"
             data-name="Spiced Vanilla Lip Balm"
           >
-            <!-- PRODUCT IMAGE GALLERY -->
             <div class="product-gallery">
-              <!-- MAIN IMAGE -->
               <div class="product-image">
                 <img
                   class="main-product-image"
@@ -600,20 +493,21 @@ LIPCARE
                   loading="lazy"
                 />
               </div>
-
-              <!-- THUMBNAILS -->
+<!-- =========================================================
+                    PRODUCT THUMBNAILS
+========================================================= -->
               <div class="product-thumbnails">
-                <!-- PHOTO 1 -->
                 <button
                   type="button"
                   class="product-thumbnail active"
                   data-image="img/SpicedVanillaLipBalm.jpg"
                   aria-label="View first Spiced Vanilla Lip Balm image"
                 >
-                  <img src="img/SpicedVanillaLipBalm.jpg" alt="" />
+                  <img
+                    src="img/SpicedVanillaLipBalm.jpg"
+                    alt=""
+                  />
                 </button>
-
-                <!-- PHOTO 2 -->
                 <button
                   type="button"
                   class="product-thumbnail"
@@ -623,17 +517,11 @@ LIPCARE
                   <img src="img/LipBalm.jpg" alt="" />
                 </button>
               </div>
-              <!-- END product-thumbnails -->
             </div>
-            <!-- END product-gallery -->
-
             <div class="product-info">
               <p class="product-category">Lipcare</p>
-
               <h3>Spiced Vanilla Lip Balm</h3>
-
               <p class="price">$5.00 each / 2 for $8.00</p>
-
               <p>
                 5g<br />
                 <strong>Description:</strong><br />
@@ -642,10 +530,9 @@ LIPCARE
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-HONEY BEE LIP BALM
-========================================== -->
+<!-- =========================================================
+                    HONEY BEE LIP BALM
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="lipcare"
@@ -659,14 +546,10 @@ HONEY BEE LIP BALM
                 loading="lazy"
               />
             </div>
-
             <div class="product-info">
               <p class="product-category">Lipcare</p>
-
               <h3>Honey Bee Lip Balm</h3>
-
               <p class="price">$5.00 each / 2 for $8.00</p>
-
               <p>
                 5g<br />
                 <strong>Description:</strong><br />
@@ -676,59 +559,50 @@ HONEY BEE LIP BALM
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-LIPCARE PRODUCT 3
-Placeholder until product is added
-========================================== -->
+<!-- =========================================================
+                    PRODUCT
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="lipcare"
             data-price="0.00"
-            data-name="Product 3"
+            data-name="PRODUCT"
           >
             <div class="product-image"></div>
-
             <div class="product-info">
               <p class="product-category">Lipcare</p>
-
-              <h3>Product 3</h3>
-
+              <h3>PRODUCT</h3>
               <p class="price">$00.00</p>
-
               <p>
                 oz<br />
                 <strong>Description:</strong><br />
                 <strong>Ingredients:</strong>
+                ..........
               </p>
             </div>
           </article>
         </div>
       </section>
-
-      <!-- ==================================================
-APOTHECARY
-=================================================== -->
+<!-- =========================================================
+                    HEALTH AND WELLNESS
+========================================================= -->
       <section
-        id="apothecary"
+        id="health and wellness"
         class="content-section section-pad product-section"
       >
-        <p class="eyebrow">From the apothecary</p>
-
-        <h2>Apothecary</h2>
-
+        <p class="eyebrow">From the Artisan</p>
+        <h2>Helath and Wellness</h2>
         <p class="section-intro">
           Small-batch botanical goods inspired by traditional herbal rituals and
           the natural world.
         </p>
-
         <div class="product-grid">
-          <!-- =========================================
-  BREATHE BETTER RUB
-  ========================================== -->
+<!-- =========================================================
+                    BREATHE BETTER RUB
+========================================================= -->
           <article
             class="product-card reveal"
-            data-category="apothecary"
+            data-category="health and wellness"
             data-price="8.00"
             data-name="Breathe Better Rub"
           >
@@ -739,14 +613,10 @@ APOTHECARY
                 loading="lazy"
               />
             </div>
-
             <div class="product-info">
-              <p class="product-category">Apothecary</p>
-
+              <p class="product-category">Health and Wellness</p>
               <h3>Breathe Better Rub</h3>
-
               <p class="price">$8.00</p>
-
               <p>
                 1oz<br />
                 <strong>Description:</strong><br />
@@ -756,13 +626,12 @@ APOTHECARY
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-BREATHE BETTER RUB - 6MO+ KID FRIENDLY
-========================================== -->
+<!-- =========================================================
+                    BREATHE BETTER RUB - 6MO+ KID FRIENDLY
+========================================================= -->
           <article
             class="product-card reveal"
-            data-category="apothecary"
+            data-category="health and wellness"
             data-price="8.00"
             data-name="Breathe Better Rub - 6mo+ Kid Friendly"
           >
@@ -773,14 +642,10 @@ BREATHE BETTER RUB - 6MO+ KID FRIENDLY
                 loading="lazy"
               />
             </div>
-
             <div class="product-info">
-              <p class="product-category">Apothecary</p>
-
+              <p class="product-category">Health and Wellness</p>
               <h3>Breathe Better Rub - 6mo+ Kid Friendly</h3>
-
               <p class="price">$8.00</p>
-
               <p>
                 1oz<br />
                 <strong>Description:</strong><br />
@@ -790,13 +655,12 @@ BREATHE BETTER RUB - 6MO+ KID FRIENDLY
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-LOTION DROPS - HERBAL INFUSED
-========================================== -->
+<!-- =========================================================
+                    LOTION DROPS - HERBAL INFUSED
+========================================================= -->
           <article
             class="product-card reveal"
-            data-category="apothecary"
+            data-category="health and wellness"
             data-price="12.00"
             data-name="Lotion Drops - Herbal Infused"
           >
@@ -807,14 +671,10 @@ LOTION DROPS - HERBAL INFUSED
                 loading="lazy"
               />
             </div>
-
             <div class="product-info">
-              <p class="product-category">Apothecary</p>
-
+              <p class="product-category">Health and Wellness</p>
               <h3>Lotion Drops - Herbal Infused</h3>
-
               <p class="price">$12.00</p>
-
               <p>
                 24 Pieces in a 4oz Tin<br />
                 <strong>Description:</strong><br />
@@ -825,62 +685,26 @@ LOTION DROPS - HERBAL INFUSED
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-SPICED VANILLA LOTION DROPS
-FIXED: gallery is properly closed
-========================================== -->
+<!-- =========================================================
+                    SPICED VANILLA LOTION DROPS
+========================================================= -->
           <article
             class="product-card reveal"
-            data-category="apothecary"
+            data-category="health and wellness"
             data-price="12.00"
             data-name="Spiced Vanilla Lotion Drops"
           >
-            <!-- PRODUCT IMAGE GALLERY -->
-            <div class="product-gallery">
-              <!-- MAIN IMAGE -->
-              <div class="product-image">
-                <img
-                  class="main-product-image"
-                  src="img/SpicedVanillaLotionDrops.jpg"
-                  alt="Spiced Vanilla Lotion Drops"
-                  loading="lazy"
-                />
-              </div>
-
-              <!-- THUMBNAILS -->
-              <div class="product-thumbnails">
-                <!-- PHOTO 1 -->
-                <button
-                  type="button"
-                  class="product-thumbnail active"
-                  data-image="img/SpicedVanillaLotionDrops.jpg"
-                  aria-label="View first Spiced Vanilla Lotion Drops image"
-                >
-                  <img src="img/SpicedVanillaLotionDrops.jpg" alt="" />
-                </button>
-
-                <!-- PHOTO 2 -->
-                <button
-                  type="button"
-                  class="product-thumbnail"
-                  data-image="img/SpicedVanillaLotionDrops2.jpg"
-                  aria-label="View second Spiced Vanilla Lotion Drops image"
-                >
-                  <img src="img/SpicedVanillaLotionDrops2.jpg" alt="" />
-                </button>
-              </div>
-              <!-- END product-thumbnails -->
+            <div class="product-image">
+              <img
+                src="img/SpicedVanillaLotionDrops2.jpg"
+                alt="Spiced Vanilla Lotion Drops"
+                loading="lazy"
+              />
             </div>
-            <!-- END product-gallery -->
-
             <div class="product-info">
-              <p class="product-category">Apothecary</p>
-
+              <p class="product-category">Health and Wellness</p>
               <h3>Spiced Vanilla Lotion Drops</h3>
-
               <p class="price">$12.00</p>
-
               <p>
                 24 Pieces in a 4oz Tin<br />
                 <strong>Description:</strong><br />
@@ -890,27 +714,26 @@ FIXED: gallery is properly closed
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-WOUND OIL
-========================================== -->
+<!-- =========================================================
+                    WOUND OIL
+========================================================= -->
           <article
             class="product-card reveal"
-            data-category="apothecary"
+            data-category="health and wellness"
             data-price="12.00"
             data-name="Wound Oil"
           >
             <div class="product-image">
-              <img src="img/WoundOil.jpg" alt="Wound Oil" loading="lazy" />
+              <img
+                src="img/WoundOil.jpg"
+                alt="Wound Oil"
+                loading="lazy"
+              />
             </div>
-
             <div class="product-info">
-              <p class="product-category">Apothecary</p>
-
+              <p class="product-category">Health and Wellness</p>
               <h3>Wound Oil</h3>
-
               <p class="price">$12.00 / $18.00</p>
-
               <p>
                 10ml roller / 2oz<br />
                 <strong>Description:</strong><br />
@@ -920,27 +743,26 @@ WOUND OIL
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-WOUND BALM
-========================================== -->
+<!-- =========================================================
+                    WOUND BALM
+========================================================= -->
           <article
             class="product-card reveal"
-            data-category="apothecary"
+            data-category="health and wellness"
             data-price="18.00"
             data-name="Wound Balm"
           >
             <div class="product-image">
-              <img src="img/WoundBalm.jpg" alt="Wound Balm" loading="lazy" />
+              <img
+                src="img/WoundBalm.jpg"
+                alt="Wound Balm"
+                loading="lazy"
+              />
             </div>
-
             <div class="product-info">
-              <p class="product-category">Apothecary</p>
-
+              <p class="product-category">Health and Wellness</p>
               <h3>Wound Balm</h3>
-
               <p class="price">$18.00 / $28.00</p>
-
               <p>
                 2oz / 4oz<br />
                 <strong>Description:</strong><br />
@@ -953,59 +775,51 @@ WOUND BALM
           </article>
         </div>
       </section>
-
-      <!-- ==================================================
-PERFUME
-=================================================== -->
-      <section id="perfume" class="content-section section-pad product-section">
+<!-- =========================================================
+                    PERFUME
+========================================================= -->
+      <section
+        id="perfume"
+        class="content-section section-pad product-section"
+      >
         <p class="eyebrow">Botanical fragrance</p>
-
         <h2>Perfume</h2>
-
         <p class="section-intro">
           Handcrafted fragrances inspired by forests, flowers, herbs, and quiet
           moments outdoors.
         </p>
-
         <div class="product-grid">
-          <!-- =========================================
-    SEX ON THE BEACH SEA SALT SPRAY
-    ========================================== -->
+<!-- =========================================================
+                    PRODUCT
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="perfume"
-            data-price="15.00"
-            data-name="Sex on the Beach Sea Salt Spray"
+            data-price="00.00"
+            data-name="PRODUCT"
           >
             <div class="product-image">
               <img
-                src="img/SexontheBeachSeaSaltSpray.jpg"
-                alt="Sex on the Beach Sea Salt Spray"
+                src="img/.jpg"
+                alt="PRODUCT"
                 loading="lazy"
               />
             </div>
-
             <div class="product-info">
               <p class="product-category">Perfume</p>
-
-              <h3>Sex on the Beach Sea Salt Spray</h3>
-
-              <p class="price">$15.00</p>
-
+              <h3>PRODUCT</h3>
+              <p class="price">$00.00</p>
               <p>
-                4oz<br />
+                oz<br />
                 <strong>Description:</strong><br />
                 <strong>Ingredients:</strong>
-                Celtic French sea salt, organic aloe gel, filtered water &amp;
-                an essential oil blend of ylang ylang, cedar, rosemary &amp;
-                lavender.
+                ................
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-  THE DIVINE NATURAL PERFUME BODY OIL
-  ========================================== -->
+<!-- =========================================================
+                    THE DIVINE NATURAL PERFUME BODY OIL
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="perfume"
@@ -1019,14 +833,10 @@ PERFUME
                 loading="lazy"
               />
             </div>
-
             <div class="product-info">
               <p class="product-category">Perfume</p>
-
               <h3>The Divine Natural Perfume Body Oil</h3>
-
               <p class="price">$22.00</p>
-
               <p>
                 1oz<br />
                 <strong>Description:</strong><br />
@@ -1036,10 +846,9 @@ PERFUME
               </p>
             </div>
           </article>
-
-          <!-- =========================================
-BOTANICAL PERFUME COLLECTION
-========================================== -->
+<!-- =========================================================
+                    BOTANICAL PERFUME COLLECTION
+========================================================= -->
           <article
             class="product-card reveal"
             data-category="perfume"
@@ -1053,24 +862,15 @@ BOTANICAL PERFUME COLLECTION
                 loading="lazy"
               />
             </div>
-
             <div class="product-info">
               <p class="product-category">Perfume</p>
-
               <h3>Botanical Perfume Collection</h3>
-
               <p class="price">
-                Spray:<br />
-                $12.00 / $18.00<br />
-                Oil:<br />
-                $5.00 each or 2 for $8.00 / $22.00
+                $12.00 / $18.00
               </p>
-
               <p>
-                Perfume spray: 10 mL / 0.5 oz | Perfume oil: 5 mL / 1 oz<br />
-
+                Perfume spray: 10 mL / 0.5 oz<br />
                 <strong>Description:</strong><br />
-
                 <strong>Ingredients:</strong>
                 Individual scent ingredients vary by fragrance.
               </p>
@@ -1078,75 +878,72 @@ BOTANICAL PERFUME COLLECTION
           </article>
         </div>
       </section>
-
-      <!-- =========================================
-CUSTOM & BULK ORDERS
-========================================== -->
+<!-- =========================================================
+                    CUSTOM & BULK ORDERS
+========================================================= -->
       <section
         id="custom-orders"
         class="content-section section-pad custom-order-section"
       >
         <div class="product-cta reveal">
           <p class="eyebrow">Made especially for you</p>
-
           <h2>Custom &amp; Bulk Orders</h2>
-
           <p>
             Looking for something a little different? Custom product requests,
             special quantities, gift sets, event favors, and bulk orders are
             welcome.
           </p>
-
           <p>
             Contact The Rooted Robin to share what you have in mind and discuss
             availability, quantities, and custom pricing.
           </p>
-
-          <a class="button button-primary" href="contact.html">
+          <a
+            class="button button-primary"
+            href="contact.html"
+          >
             Request a Custom Order
           </a>
         </div>
       </section>
     </main>
-
-    <!-- =========================================
-SITE FOOTER
-========================================== -->
+<!-- =========================================================
+                    FOOTER
+========================================================= -->
     <footer class="site-footer">
-      <!-- FOOTER BRAND -->
+<!-- =========================================================
+                    FOOTER BRAND INFORMATION
+========================================================= -->
       <div class="footer-brand">
         <span class="brand-mark">❧</span>
-
         <strong>The Rooted Robin</strong>
-
         <p>
           Natural • Handcrafted • Rooted<br />
           Shawano, Wisconsin
         </p>
       </div>
-
-      <!-- FOOTER PAGE LINKS -->
+<!-- =========================================================
+                    FOOTER EXPLORE LINKS
+========================================================= -->
       <div>
         <h2>Explore</h2>
-
-        <a href="about.html"> About </a>
-
-        <a href="products.html"> Products </a>
-
-        <a href="gallery.html"> Gallery </a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
       </div>
-
-      <!-- FOOTER CONTACT LINKS -->
+<!-- =========================================================
+                    FOOTER CONTACT INFORMATION
+========================================================= -->
       <div>
         <h2>Connect</h2>
-
-        <!-- EMAIL -->
-        <a href="mailto:contactmiha@proton.me"> contactmiha@proton.me </a>
-
-        <!-- PHONE -->
-        <a href="tel:+12243866089"> 224-386-6089 </a>
-
-        <!-- INSTAGRAM FOLLOW BUTTON -->
+        <a href="mailto:contactmiha@proton.me">
+          contactmiha@proton.me
+        </a>
+        <a href="tel:+12243866089">
+          224-386-6089
+        </a>
+<!-- =========================================================
+                    INSTAGRAM FOLLOW BUTTON
+========================================================= -->
         <a
           href="https://www.instagram.com/the.rooted.robin/"
           target="_blank"
@@ -1160,12 +957,14 @@ SITE FOOTER
               <span class="instagram-dot"></span>
             </span>
           </span>
-
-          <span class="instagram-text"> FOLLOW ME </span>
+          <span class="instagram-text">
+            FOLLOW ME
+          </span>
         </a>
       </div>
-
-      <!-- COPYRIGHT -->
+<!-- =========================================================
+                    COPYRIGHT
+========================================================= -->
       <p class="copyright">
         © <span data-year></span> The Rooted Robin. Handcrafted with care.
       </p>

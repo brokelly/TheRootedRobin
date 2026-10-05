@@ -8,9 +8,6 @@
       content="Contact The Rooted Robin for purchases, bulk orders, and custom commissions."
     />
     <title>Contact | The Rooted Robin</title>
-    <!-- =========================================
-  GOOGLE FONTS
-  ========================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,10 +18,17 @@
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main"> Skip to content </a>
-
+<!-- =========================================================
+                    SKIP TO CONTENT LINK
+========================================================= -->
+    <a class="skip-link" href="#main">Skip to content</a>
+<!-- =========================================================
+                    HEADER
+========================================================= -->
     <header class="site-header">
-      <!-- Logo/brand links back to index.html -->
+<!-- =========================================================
+                    WEBSITE BRAND
+========================================================= -->
       <a class="brand" href="index.html">
         <span class="brand-mark">❧</span>
         <span>
@@ -32,7 +36,9 @@
           <small>Natural • Handcrafted • Rooted</small>
         </span>
       </a>
-
+<!-- =========================================================
+                    MOBILE MENU BUTTON
+========================================================= -->
       <button
         class="menu-button"
         aria-expanded="false"
@@ -40,7 +46,14 @@
       >
         Menu
       </button>
-      <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
+<!-- =========================================================
+                    MAIN NAVIGATION
+========================================================= -->
+      <nav
+        id="main-navigation"
+        class="main-nav"
+        aria-label="Main navigation"
+      >
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="products.html">Products</a>
@@ -48,27 +61,30 @@
         <a class="nav-cta active" href="contact.html">Contact</a>
       </nav>
     </header>
-
+<!-- =========================================================
+                    MAIN PAGE CONTENT
+========================================================= -->
     <main id="main">
-      <!-- =========================================
-  CONTACT PAGE HERO
-  ========================================== -->
+<!-- =========================================================
+                    CONTACT PAGE HERO
+========================================================= -->
       <section class="page-hero">
         <div>
           <p class="eyebrow">Let’s make something meaningful</p>
-          <h1>Contact &amp Commissions</h1>
+          <h1>Contact &amp; Commissions</h1>
           <p>
             Reach out for direct purchases, bulk product requests, custom
             jewelry, or personal art projects.
           </p>
         </div>
       </section>
-
-      <!-- =========================================
-  CONTACT SECTION
-  ========================================== -->
+<!-- =========================================================
+                    CONTACT SECTION
+========================================================= -->
       <section class="content-section section-pad contact-layout">
-        <!--CONTACT INFORMATION -->
+<!-- =========================================================
+                    CONTACT INFORMATION
+========================================================= -->
         <aside class="contact-details reveal">
           <p class="eyebrow">Get in touch</p>
           <h2>From an idea to something made by hand.</h2>
@@ -76,22 +92,29 @@
             Share as much detail as you can. You will receive a personal
             response about availability, timing, and pricing.
           </p>
-
-          <!-- Opens the visitor's default email application -->
+<!-- =========================================================
+                    EMAIL
+========================================================= -->
           <p>
             <strong>Email</strong><br />
-            <a href="mailto:contactmiha@proton.me"> contactmiha@proton.me </a>
+            <a href="mailto:contactmiha@proton.me">
+              contactmiha@proton.me
+            </a>
           </p>
-
-          <!-- Opens the phone/dialer on supported devices -->
+<!-- =========================================================
+                    PHONE
+========================================================= -->
           <p>
             <strong>Phone</strong><br />
-            <a href="tel:+12243866089"> 224-386-6089 </a>
+            <a href="tel:+12243866089">
+              224-386-6089
+            </a>
           </p>
-          <!-- Opens The Rooted Robin Instagram page in a new tab -->
+<!-- =========================================================
+                    INSTAGRAM
+========================================================= -->
           <p>
             <strong>Instagram</strong><br />
-
             <a
               href="https://www.instagram.com/the.rooted.robin/"
               target="_blank"
@@ -105,62 +128,83 @@
                   <span class="instagram-dot"></span>
                 </span>
               </span>
-
               <span class="instagram-text">FOLLOW ME</span>
             </a>
           </p>
+<!-- =========================================================
+                    LOCATION
+========================================================= -->
           <p>
             <strong>Location</strong><br />
             Shawano, Wisconsin
           </p>
         </aside>
-
-        <!-- =======================================
-  COMMISSION REQUEST FORM
-  ======================================== -->
+<!-- =========================================================
+                    COMMISSION REQUEST FORM
+========================================================= -->
         <form id="commission-form" class="contact-form reveal">
-          <!-- NAME FIELD -->
+<!-- =========================================================
+                    NAME FIELD
+========================================================= -->
           <div class="form-field">
-            <label for="name"> Name * </label>
+            <label for="name">Name *</label>
             <input id="name" name="name" type="text" required />
           </div>
-
-          <!-- EMAIL OR PHONE FIELD -->
+<!-- =========================================================
+                    EMAIL OR PHONE FIELD
+========================================================= -->
           <div class="form-field">
-            <label for="contact"> Email or phone * </label>
+            <label for="contact">Email or phone *</label>
             <input id="contact" name="contact" type="text" required />
           </div>
-
-          <!--REQUEST TYPE-->
+<!-- =========================================================
+                    REQUEST TYPE
+========================================================= -->
           <div class="form-field">
-            <label for="requestType"> Request type * </label>
+            <label for="requestType">Request type *</label>
             <select id="requestType" name="requestType" required>
               <option value="">Choose one</option>
               <option value="Direct product purchase">
                 Direct product purchase
               </option>
-              <option value="Bulk product request">Bulk product request</option>
-              <option value="Custom jewelry">Custom jewelry</option>
-              <option value="Personal art project">Personal art project</option>
-              <option value="Other">Other</option>
+              <option value="Bulk product request">
+                Bulk product request
+              </option>
+              <option value="Custom jewelry">
+                Custom jewelry
+              </option>
+              <option value="Personal art project">
+                Personal art project
+              </option>
+              <option value="Other">
+                Other
+              </option>
             </select>
           </div>
-
-          <!-- DESIRED DATE FIELD -->
+<!-- =========================================================
+                    DESIRED DATE
+========================================================= -->
           <div class="form-field">
-            <label for="date"> Date desired </label>
+            <label for="date">Date desired</label>
             <input id="date" name="date" type="date" />
           </div>
-
-          <!--BUDGET FIELD -->
+<!-- =========================================================
+                    BUDGET OR RATE
+========================================================= -->
           <div class="form-field full">
-            <label for="rate"> Budget or rate range </label>
-            <input id="rate" name="rate" type="text" placeholder="Optional" />
+            <label for="rate">Budget or rate range</label>
+            <input
+              id="rate"
+              name="rate"
+              type="text"
+              placeholder="Optional"
+            />
           </div>
-
-          <!--PROJECT DESCRIPTION-->
+<!-- =========================================================
+                    PROJECT DESCRIPTION
+========================================================= -->
           <div class="form-field full">
-            <label for="description"> Project description * </label>
+            <label for="description">Project description *</label>
             <textarea
               id="description"
               name="description"
@@ -168,11 +212,15 @@
               placeholder="Tell me about the product, quantity, materials, colors, size, or personal meaning you have in mind."
             ></textarea>
           </div>
-
-          <!--FORM SUBMIT BUTTON -->
+<!-- =========================================================
+                    SUBMIT BUTTON
+========================================================= -->
           <button class="button button-primary" type="submit">
             Create email request
           </button>
+<!-- =========================================================
+                    FORM MESSAGE
+========================================================= -->
           <p class="form-message" aria-live="polite">
             This button opens your email app with the completed request. No
             information is stored on this website.
@@ -180,40 +228,44 @@
         </form>
       </section>
     </main>
-
-    <!-- =========================================
-SITE FOOTER
-========================================== -->
+<!-- =========================================================
+                    FOOTER
+========================================================= -->
     <footer class="site-footer">
-      <!-- FOOTER BRAND -->
+<!-- =========================================================
+                    FOOTER BRAND INFORMATION
+========================================================= -->
       <div class="footer-brand">
         <span class="brand-mark">❧</span>
         <strong>The Rooted Robin</strong>
         <p>
-          Natural goods &amp handmade jewelry<br />
+          Natural goods<br />
           Shawano, Wisconsin
         </p>
       </div>
-
-      <!--FOOTER PAGE LINKS -->
+<!-- =========================================================
+                    FOOTER EXPLORE LINKS
+========================================================= -->
       <div>
         <h2>Explore</h2>
-        <a href="about.html"> About </a>
-        <a href="products.html"> Products </a>
-        <a href="gallery.html"> Gallery </a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
       </div>
-
-      <!--FOOTER CONTACT LINKS-->
+<!-- =========================================================
+                    FOOTER CONTACT INFORMATION
+========================================================= -->
       <div>
         <h2>Connect</h2>
-
-        <!-- Email -->
-        <a href="mailto:contactmiha@proton.me"> contactmiha@proton.me </a>
-
-        <!-- Phone -->
-        <a href="tel:+12243866089"> 224-386-6089 </a>
-
-        <!-- Instagram Follow Me Button -->
+        <a href="mailto:contactmiha@proton.me">
+          contactmiha@proton.me
+        </a>
+        <a href="tel:+12243866089">
+          224-386-6089
+        </a>
+<!-- =========================================================
+                    INSTAGRAM FOLLOW BUTTON
+========================================================= -->
         <a
           href="https://www.instagram.com/the.rooted.robin/"
           target="_blank"
@@ -230,12 +282,12 @@ SITE FOOTER
           <span class="instagram-text">FOLLOW ME</span>
         </a>
       </div>
-
-      <!-- =======================================
-COPYRIGHT
-======================================== -->
+<!-- =========================================================
+                    COPYRIGHT
+========================================================= -->
       <p class="copyright">
         © <span data-year></span> The Rooted Robin. Handcrafted with care.
+        </html>
       </p>
     </footer>
   </body>

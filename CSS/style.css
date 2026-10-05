@@ -13,50 +13,30 @@
   --sans: Montserrat, Arial, sans-serif;
   --script: Parisienne, cursive;
 }
-
-/* =========================================================
-GLOBAL WEBSITE SETTINGS
-========================================================== */
-
-/* Makes padding and borders count inside element widths */
 * {
   box-sizing: border-box;
 }
-/* smooth scrolling when navigation links are clicked */
 html {
   scroll-behavior: smooth;
 }
-
-/* =========================================================
-MAIN PAGE BACKGROUND
-========================================================= */
-
 body {
   margin: 0;
   color: var(--ink);
-  /* Backup background */
   background-color: var(--cream);
-  /* Cream overlay */
   background-image:
-    linear-gradient(rgba(247, 241, 229, 0.8), rgba(247, 241, 229, 0.8)),
+    linear-gradient(
+      rgba(247, 241, 229, 0.8),
+      rgba(247, 241, 229, 0.8)
+    ),
     url("../img/background1.jpg");
-  /* image cover the entire window */
   background-size: cover;
-  /* image centered */
   background-position: center;
-  /* keeps image from repeating */
   background-repeat: no-repeat;
-  /* Keeps image stationary while page content scrolls */
   background-attachment: fixed;
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.7;
 }
-
-/* =========================================================
-BASIC ELEMENTS
-========================================================= */
-
 a {
   color: inherit;
 }
@@ -64,11 +44,9 @@ img {
   display: block;
   max-width: 100%;
 }
-
 /* =========================================================
-ACCESSIBILITY SKIP LINK
+                    SKIP LINK
 ========================================================= */
-
 .skip-link {
   position: absolute;
   top: 0;
@@ -80,11 +58,9 @@ ACCESSIBILITY SKIP LINK
 .skip-link:focus {
   left: 0;
 }
-
 /* =========================================================
-HEADER
+                    SITE HEADER
 ========================================================= */
-
 .site-header {
   position: sticky;
   top: 0;
@@ -94,17 +70,13 @@ HEADER
   justify-content: space-between;
   height: 90px;
   padding: 0 clamp(1.2rem, 4vw, 5rem);
-  /* Slight transparency keeps the natural background visible */
   background-color: rgba(247, 241, 229, 0.9);
-  border-bottom: 1px solid var(--line);
-  /* Creates the frosted glass appearance */
+  border-bottom: 2px solid var(--gold);
   backdrop-filter: blur(12px);
 }
-
 /* =========================================================
-BRAND / LOGO
+                    BRAND
 ========================================================= */
-
 .brand {
   display: flex;
   align-items: center;
@@ -128,11 +100,9 @@ BRAND / LOGO
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
-
 /* =========================================================
-MAIN NAVIGATION
+                    MAIN NAVIGATION
 ========================================================= */
-
 .main-nav {
   display: flex;
   align-items: center;
@@ -146,24 +116,26 @@ MAIN NAVIGATION
   letter-spacing: 0.13em;
   text-decoration: none;
   text-transform: uppercase;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
-/* Gold hover effect for navigation links */
 .main-nav a:hover,
 .main-nav a.active {
   color: var(--gold);
   border-color: var(--gold);
 }
-/* Special navigation call-to-action button */
 .main-nav .nav-cta {
   padding: 0.65rem 1.2rem;
-  border: 1px solid var(--forest);
+  border: 1px solid var(--gold);
 }
-
+.main-nav .nav-cta:hover {
+  color: var(--deep);
+  background-color: var(--gold);
+}
 /* =========================================================
-MOBILE MENU BUTTON
-Hidden on desktop and displayed on smaller screens.
+                    MOBILE MENU BUTTON
 ========================================================= */
-
 .menu-button {
   display: none;
   padding: 0.55rem 0.8rem;
@@ -177,27 +149,19 @@ Hidden on desktop and displayed on smaller screens.
   text-transform: uppercase;
   cursor: pointer;
 }
-
 /* =========================================================
-HOME PAGE HERO
+                    HOME PAGE HERO
 ========================================================= */
-
 .hero {
   position: relative;
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
-  /* Controls the height of the green hero section */
   min-height: 500px;
   color: var(--cream);
-  /* Dark forest green background */
   background-color: rgba(23, 60, 50, 0.96);
+  border-bottom: 3px solid var(--gold);
   overflow: hidden;
 }
-
-/* =========================================================
-HERO DECORATIVE TEXTURE
-========================================================= */
-
 .hero::before,
 .page-hero::before {
   content: "";
@@ -210,11 +174,9 @@ HERO DECORATIVE TEXTURE
     rgba(255, 255, 255, 0.18) 39px 40px
   );
 }
-
 /* =========================================================
-HERO TEXT
+                    HERO COPY
 ========================================================= */
-
 .hero-copy {
   position: relative;
   z-index: 2;
@@ -227,6 +189,14 @@ HERO TEXT
   font-weight: 600;
   letter-spacing: 0.24em;
   text-transform: uppercase;
+}
+.hero .eyebrow::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 2px;
+  margin-top: 0.8rem;
+  background-color: var(--gold);
 }
 .hero h1,
 .page-hero h1 {
@@ -248,11 +218,9 @@ HERO TEXT
   color: #e4e5db;
   font-size: 1.05rem;
 }
-
 /* =========================================================
-BUTTONS
+                    BUTTON ROW
 ========================================================= */
-
 .button-row {
   display: flex;
   flex-wrap: wrap;
@@ -277,141 +245,59 @@ BUTTONS
 .button:hover {
   transform: translateY(-2px);
 }
-/* Gold primary button */
 .button-primary {
   color: var(--deep);
   background-color: var(--gold);
+  border-color: var(--gold);
 }
 .button-primary:hover {
   background-color: #cfaa62;
+  box-shadow: 0 5px 18px rgba(184, 138, 59, 0.3);
 }
-/* Transparent button used on dark backgrounds */
 .button-ghost {
   color: var(--cream);
 }
 .button-ghost:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-
 /* =========================================================
-HERO ART AREA
+                 HOME PAGE - HERO ART
 ========================================================= */
-
 .hero-art {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 520px;
-  background-image: radial-gradient(
-    circle at 50% 50%,
-    rgba(247, 241, 229, 0.18),
-    transparent 48%
+  padding: 2rem;
+  overflow: hidden;
+}
+/* =========================================================
+                    HERO IMAGE
+========================================================= */
+.hero-image {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  max-height: 460px;
+  object-fit: contain;
+  filter: drop-shadow(
+    0 25px 25px rgba(0, 0, 0, 0.28)
   );
 }
-
 /* =========================================================
-DECORATIVE MOON
+                    GENERAL SECTION PADDING
 ========================================================= */
-
-.moon {
-  position: absolute;
-  top: 15%;
-  left: 35%;
-  width: 310px;
-  height: 310px;
-  border-radius: 50%;
-  background-image: radial-gradient(
-    circle at 35% 35%,
-    #fff9e8,
-    #cdbd8e 75%,
-    #98825d
-  );
-  box-shadow: 0 0 90px rgba(255, 245, 205, 0.3);
-}
-
-/* =========================================================
-DECORATIVE APOTHECARY BOTTLES
-========================================================= */
-
-.bottle {
-  position: absolute;
-  bottom: 14%;
-  display: grid;
-  place-items: center;
-  border: 2px solid rgba(240, 215, 158, 0.8);
-  background-image: linear-gradient(
-    100deg,
-    rgba(255, 255, 255, 0.18),
-    rgba(11, 38, 32, 0.7)
-  );
-  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
-}
-/* Creates the neck/top of each bottle */
-.bottle::before {
-  content: "";
-  position: absolute;
-  top: -58px;
-  width: 45%;
-  height: 58px;
-  background-color: #4f3924;
-  border: 2px solid rgba(240, 215, 158, 0.8);
-  border-bottom: 0;
-}
-/* Bottle label */
-.bottle span {
-  padding: 1rem 0.5rem;
-  color: var(--forest);
-  background-color: rgba(247, 241, 229, 0.86);
-  border: 1px solid var(--gold);
-  font-family: var(--serif);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.23em;
-}
-.bottle-one {
-  left: 25%;
-  width: 145px;
-  height: 280px;
-  border-radius: 30% 30% 15px 15px;
-}
-.bottle-two {
-  right: 17%;
-  width: 120px;
-  height: 210px;
-  border-radius: 45% 45% 12px 12px;
-}
-
-/* =========================================================
-DECORATIVE PLANT SPRIGS
-========================================================= */
-
-.sprig {
-  position: absolute;
-  bottom: 3%;
-  color: var(--sage);
-  font-size: 14rem;
-  line-height: 1;
-  filter: drop-shadow(0 15px 7px rgba(0, 0, 0, 0.3));
-}
-.sprig-left {
-  left: -3%;
-  transform: rotate(-28deg);
-}
-.sprig-right {
-  right: -8%;
-  transform: rotate(205deg);
-}
-
-/* =========================================================
-STANDARD SECTION SPACING
-========================================================= */
-
 .section-pad {
-  padding: clamp(4.5rem, 8vw, 8rem) clamp(1.3rem, 8vw, 8rem);
+  padding:
+    clamp(4.5rem, 8vw, 8rem)
+    clamp(1.3rem, 8vw, 8rem);
 }
-
 /* =========================================================
-INTRODUCTION SECTION
+                    INTRO SECTION
 ========================================================= */
-
 .intro {
   max-width: 980px;
   margin: auto;
@@ -428,44 +314,51 @@ INTRODUCTION SECTION
   font-weight: 600;
   line-height: 1;
 }
+.intro h2::after,
+.content-section h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin: 1rem auto 0;
+  background-color: var(--gold);
+}
 .wide-copy {
   max-width: 760px;
   margin: auto;
   color: var(--muted);
 }
-
 /* =========================================================
-CATEGORY GRID
+                    CATEGORY GRID
 ========================================================= */
-
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.4rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
   padding-top: 0;
 }
-
-/* =========================================================
-CATEGORY CARDS
-========================================================= */
-
 .category-card {
   position: relative;
   padding: 2.5rem;
   background-color: rgba(255, 250, 240, 0.82);
-  border: 1px solid var(--line);
+  border: 1px solid rgba(184, 138, 59, 0.55);
+  border-top: 3px solid var(--gold);
   overflow: hidden;
   transition:
     transform 0.25s,
-    box-shadow 0.25s;
+    box-shadow 0.25s,
+    border-color 0.25s ease;
 }
 .category-card:hover {
+  border-color: var(--gold);
   transform: translateY(-5px);
-  box-shadow: 0 18px 40px rgba(23, 60, 50, 0.1);
+  box-shadow: 18px 18px 0 rgba(184, 138, 59, 0.65);
 }
 .card-icon {
   color: var(--gold);
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 .category-card h3 {
   margin: 0.2rem 0 0.7rem;
@@ -486,6 +379,11 @@ CATEGORY CARDS
   letter-spacing: 0.12em;
   text-decoration: none;
   text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+.category-card a:hover,
+.text-link:hover {
+  color: var(--gold);
 }
 .category-card a span,
 .text-link span {
@@ -493,16 +391,16 @@ CATEGORY CARDS
   color: var(--gold);
   font-size: 1.2rem;
 }
-
 /* =========================================================
-MISSION SECTION
+                    MISSION BAND
 ========================================================= */
-
 .mission-band {
   position: relative;
   padding: 6rem 1.5rem;
   color: var(--cream);
   background-color: rgba(14, 43, 36, 0.97);
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
   text-align: center;
   overflow: hidden;
 }
@@ -526,27 +424,25 @@ MISSION SECTION
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-
 /* =========================================================
-SPLIT CONTENT LAYOUT
+                    SPLIT SECTION
 ========================================================= */
-
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: clamp(3rem, 7vw, 8rem);
 }
-
-/* =========================================================
-ARTISAN IMAGE / ART AREA
-========================================================= */
-
 .artisan-art {
   min-height: 520px;
   padding: 2rem;
-  background-image: linear-gradient(145deg, var(--sage), var(--forest));
-  box-shadow: 22px 22px 0 var(--pale);
+  background-image:
+    linear-gradient(
+      145deg,
+      var(--sage),
+      var(--forest)
+    );
+  box-shadow: 22px 22px 0 rgba(184, 138, 59, 0.55);
 }
 .portrait-placeholder {
   display: flex;
@@ -569,11 +465,9 @@ ARTISAN IMAGE / ART AREA
   max-width: 580px;
   color: var(--muted);
 }
-
 /* =========================================================
-NEWSLETTER SECTION
+                    NEWSLETTER / INSTAGRAM SECTION
 ========================================================= */
-
 .newsletter {
   display: flex;
   align-items: center;
@@ -583,6 +477,8 @@ NEWSLETTER SECTION
   padding-top: 4rem;
   padding-bottom: 4rem;
   background-color: rgba(220, 226, 207, 0.88);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
 }
 .newsletter h2 {
   margin: 0.2rem 0;
@@ -591,18 +487,20 @@ NEWSLETTER SECTION
 .newsletter p {
   max-width: 600px;
 }
-
 /* =========================================================
-FOOTER
+                    SITE FOOTER
 ========================================================= */
-
 .site-footer {
   display: grid;
   grid-template-columns: 2fr 1fr 1.2fr;
   gap: 3rem;
-  padding: 4rem clamp(1.5rem, 8vw, 8rem) 1.5rem;
+  padding:
+    4rem
+    clamp(1.5rem, 8vw, 8rem)
+    1.5rem;
   color: #dbe1d4;
   background-color: #0a231d;
+  border-top: 3px solid var(--gold);
 }
 .footer-brand strong {
   display: block;
@@ -625,6 +523,7 @@ FOOTER
   color: #dbe1d4;
   font-size: 0.8rem;
   text-decoration: none;
+  transition: color 0.25s ease;
 }
 .site-footer a:hover {
   color: var(--gold);
@@ -633,14 +532,12 @@ FOOTER
   grid-column: 1 / -1;
   padding-top: 1.2rem;
   color: #7f988b;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(184, 138, 59, 0.45);
   font-size: 0.7rem;
 }
-
 /* =========================================================
-INNER PAGE HERO
+                    PAGE HERO
 ========================================================= */
-
 .page-hero {
   position: relative;
   display: grid;
@@ -664,647 +561,409 @@ INNER PAGE HERO
   margin: auto;
   color: #dbe1d4;
 }
-
 /* =========================================================
-GENERAL CONTENT SECTIONS
+                    CONTENT SECTION
 ========================================================= */
-
 .content-section {
   max-width: 1150px;
   margin: auto;
 }
-
-/* =========================================================
-LONG-FORM TEXT / PROSE
-========================================================= */
-
 .prose {
   max-width: 750px;
   margin: auto;
   padding: 2rem;
   background-color: rgba(255, 250, 240, 0.7);
+  border-left: 3px solid var(--gold);
 }
 .prose p {
   margin: 0 0 1.4rem;
   color: var(--muted);
 }
-
 /* =========================================================
-VALUES GRID
+                 ABOUT PAGE - VALUES
 ========================================================= */
-
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.4rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 850px;
+  margin: 3.5rem auto 0;
 }
 .value {
-  padding: 2rem;
-  background-color: rgba(255, 250, 240, 0.82);
-  border-top: 2px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  min-height: 280px;
+  background-color: rgba(255, 250, 240, 0.88);
+  border: 1px solid rgba(184, 138, 59, 0.75);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid rgba(184, 138, 59, 0.35);
+  box-shadow: 14px 14px 0 rgba(184, 138, 59, 0.55);
+}
+.value .eyebrow {
+  margin: 0 0 1.5rem;
 }
 .value h3 {
+  margin: 0 0 1.25rem;
   color: var(--forest);
   font-family: var(--serif);
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-weight: 600;
+  line-height: 1.2;
 }
-
+.value p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
 /* =========================================================
-PRODUCTS PAGE
-Used by products.html
+                    PRODUCT TOOLS
 ========================================================= */
-
-/* =========================================================
-PRODUCT SEARCH & FILTER AREA
-========================================================= */
-
 .product-tools-section {
   padding-top: 3.5rem;
   padding-bottom: 2rem;
 }
-
 .product-tools {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 1.25rem;
-
   padding: 2rem;
-
   background-color: rgba(255, 250, 240, 0.88);
-
   border: 1px solid rgba(184, 138, 59, 0.75);
   border-top: 3px solid var(--gold);
-
   box-shadow: 14px 14px 0 rgba(184, 138, 59, 0.55);
 }
-/* =========================================================
-INDIVIDUAL PRODUCT FILTERS
-========================================================= */
-
 .product-tool {
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
 }
-
-/* Labels above Search, Section, and Price */
-
 .product-tool label {
   color: var(--forest);
-
   font-family: var(--sans);
   font-size: 0.68rem;
   font-weight: 700;
-
   letter-spacing: 0.13em;
-
   text-transform: uppercase;
 }
-
-/* Search box and dropdown menus */
-
 .product-tool input,
 .product-tool select {
   width: 100%;
   min-height: 48px;
-
   padding: 0.85rem 1rem;
-
   color: var(--ink);
-
   background-color: var(--paper);
-
   border: 1px solid rgba(184, 138, 59, 0.55);
-
   border-radius: 0;
-
   font-family: var(--sans);
   font-size: 0.85rem;
-
   transition:
     border-color 0.25s ease,
     box-shadow 0.25s ease;
 }
-
-/* Placeholder text inside search box */
-
 .product-tool input::placeholder {
   color: var(--muted);
   opacity: 0.75;
 }
-
-/* Hover effect */
-
 .product-tool input:hover,
 .product-tool select:hover {
   border-color: var(--gold);
 }
-
-/* Focus effect when clicking or tabbing into a field */
-
 .product-tool input:focus,
 .product-tool select:focus {
   border-color: var(--gold);
-
   outline: none;
-
   box-shadow: 0 0 0 2px rgba(184, 138, 59, 0.18);
 }
-
 /* =========================================================
-PRODUCT GRID
+                    PRODUCT GRID
 ========================================================= */
-
 .product-grid {
   display: grid;
-
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
   gap: 2rem;
-
   align-items: stretch;
 }
-
-/* =========================================================
-PRODUCT CARDS
-========================================================= */
-
 .product-card {
   display: flex;
   flex-direction: column;
-
   min-width: 0;
-
   background-color: rgba(255, 250, 240, 0.9);
-
   border: 1px solid rgba(184, 138, 59, 0.75);
-
   border-top: 3px solid var(--gold);
-
   box-shadow: 14px 14px 0 rgba(184, 138, 59, 0.55);
-
   overflow: hidden;
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
     border-color 0.25s ease;
 }
-
-/* Product card hover */
 .product-card:hover {
   transform: translateY(-5px);
-
   border-color: var(--gold);
-
   box-shadow: 18px 18px 0 rgba(184, 138, 59, 0.65);
 }
-
-/* =========================================================
-PRODUCT IMAGES
-========================================================= */
-
 .product-image {
   position: relative;
-
   display: grid;
-
   place-items: center;
-
   width: 100%;
-
   aspect-ratio: 1 / 1;
-
   color: rgba(23, 60, 50, 0.62);
-
-  background-image: linear-gradient(145deg, var(--pale), var(--sage));
-
+  background-image:
+    linear-gradient(
+      145deg,
+      var(--pale),
+      var(--sage)
+    );
   border-bottom: 1px solid rgba(184, 138, 59, 0.45);
-
   overflow: hidden;
 }
-
-/* Actual product photograph */
 .product-image img {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   transition: transform 0.45s ease;
 }
-
-/* Slight image zoom when hovering over product */
 .product-card:hover .product-image img {
   transform: scale(1.04);
 }
-
-/* Decorative placeholder if no image is inserted */
 .product-image:empty::before {
   content: "❧";
-
   color: rgba(23, 60, 50, 0.55);
-
   font-size: 7rem;
-
   transform: rotate(-20deg);
 }
 /* =========================================================
-PRODUCT IMAGE GALLERY
+                    PRODUCT GALLERY
 ========================================================= */
-
 .product-gallery {
   width: 100%;
 }
-
-/* Thumbnail area underneath main product image */
-
 .product-thumbnails {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-
   padding: 0.7rem;
-
   background-color: rgba(255, 250, 240, 0.95);
-
   border-bottom: 1px solid rgba(184, 138, 59, 0.45);
 }
-
-/* Individual thumbnail button */
-
 .product-thumbnail {
   width: 55px;
   height: 55px;
-
   padding: 0;
-
   background: none;
-
   border: 1px solid rgba(184, 138, 59, 0.45);
-
   overflow: hidden;
-
   cursor: pointer;
-
   opacity: 0.65;
-
   transition:
     opacity 0.25s ease,
     border-color 0.25s ease,
     transform 0.25s ease;
 }
-
-/* Thumbnail pictures */
-
 .product-thumbnail img {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
-
-/* Selected thumbnail */
-
 .product-thumbnail.active {
   border: 2px solid var(--gold);
-
   opacity: 1;
 }
-
-/* Thumbnail hover */
-
 .product-thumbnail:hover {
   opacity: 1;
-
   transform: translateY(-2px);
 }
-
 /* =========================================================
-PRODUCT INFORMATION
+                    PRODUCT INFORMATION
 ========================================================= */
-
 .product-info {
   display: flex;
   flex-direction: column;
-
   flex: 1;
-
   padding: 1.6rem;
 }
-
-/* =========================================================
-PRODUCT CATEGORY
-========================================================= */
-
 .product-info .product-category {
   margin: 0 0 0.55rem;
-
   color: var(--gold);
-
   font-family: var(--sans);
   font-size: 0.62rem;
   font-weight: 700;
-
   letter-spacing: 0.17em;
-
   line-height: 1.4;
-
   text-transform: uppercase;
 }
-
-/* =========================================================
-PRODUCT NAME
-========================================================= */
-
 .product-info h3 {
   margin: 0 0 0.4rem;
-
   color: var(--forest);
-
   font-family: var(--serif);
   font-size: 1.8rem;
   font-weight: 600;
-
   line-height: 1.1;
-
   transition: color 0.25s ease;
 }
-
-/* Product name becomes gold when hovering */
 .product-card:hover .product-info h3 {
   color: var(--gold);
 }
-
-/* =========================================================
-PRODUCT PRICE
-========================================================= */
-
 .product-info .price {
   margin: 0.3rem 0 0.8rem;
-
   color: var(--gold);
-
   font-family: var(--serif);
   font-size: 1.25rem;
   font-weight: 600;
-
   line-height: 1.2;
 }
-
-/* =========================================================
-PRODUCT DESCRIPTION
-========================================================= */
-
 .product-info p:not(.price):not(.product-category) {
   margin: 0.3rem 0 0;
-
   color: var(--muted);
-
   font-size: 0.85rem;
-
   line-height: 1.7;
 }
-
-/* =========================================================
-HIDDEN PRODUCTS
-
-JavaScript can add/remove the hidden attribute when
-someone searches or filters products.
-========================================================= */
-
 .product-card[hidden] {
   display: none !important;
 }
-
 /* =========================================================
-CUSTOM ORDER SECTION
+                    CUSTOM ORDER SECTION
 ========================================================= */
-
 .custom-order-section {
   padding-top: 3rem;
   padding-bottom: 7rem;
 }
-
-/* Custom order box */
 .product-cta {
   position: relative;
-
   max-width: 850px;
-
   margin: 2rem auto 0;
-
   padding: clamp(2.5rem, 6vw, 4.5rem);
-
   background-color: rgba(255, 250, 240, 0.9);
-
   border: 1px solid rgba(184, 138, 59, 0.75);
-
   border-top: 3px solid var(--gold);
-
   box-shadow: 14px 14px 0 rgba(184, 138, 59, 0.55);
-
   text-align: center;
-
   overflow: hidden;
 }
-
-/* Subtle decorative background */
 .product-cta::before {
   content: "❧";
-
   position: absolute;
-
   top: -45px;
   right: 15px;
-
   color: rgba(184, 138, 59, 0.08);
-
   font-size: 12rem;
-
   line-height: 1;
-
   transform: rotate(-20deg);
-
   pointer-events: none;
 }
-
-/* Keeps CTA content above decorative symbol */
 .product-cta > * {
   position: relative;
   z-index: 1;
 }
-
-/* Custom order eyebrow */
 .product-cta .eyebrow {
   margin-bottom: 1rem;
 }
-
-/* Custom order title */
 .product-cta h2 {
   margin: 0.4rem 0 1.5rem;
-
   color: var(--forest);
-
   font-family: var(--serif);
-
   font-size: clamp(2.5rem, 5vw, 4rem);
-
   font-weight: 600;
-
   line-height: 1;
 }
-
-/* Custom order description */
 .product-cta p:not(.eyebrow) {
   max-width: 650px;
-
   margin: 0 auto 1.4rem;
-
   color: var(--muted);
-
   line-height: 1.8;
 }
-
-/* Gives button extra separation from text */
 .product-cta .button {
   margin-top: 1rem;
 }
-
-/* =========================================================
-PRODUCTS PAGE ACCESSIBILITY
-========================================================= */
-
 .product-tool input:focus-visible,
 .product-tool select:focus-visible {
   border-color: var(--gold);
-
   outline: 2px solid var(--gold);
-
   outline-offset: 3px;
 }
-
 /* =========================================================
-PRODUCTS PAGE TABLET DESIGN
+            PRODUCT RESPONSIVE - TABLET
 ========================================================= */
-
 @media (max-width: 850px) {
-  /* Search/filter layout becomes two columns */
   .product-tools {
     grid-template-columns: 1fr 1fr;
-
     gap: 1rem;
-
     box-shadow: 10px 10px 0 rgba(184, 138, 59, 0.55);
   }
-
-  /* Search box spans entire first row */
   .product-tool:first-child {
     grid-column: 1 / -1;
   }
-
-  /* Two products per row */
   .product-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     gap: 1.7rem;
   }
-
-  /* Smaller gold offset shadow */
   .product-card,
   .product-cta {
     box-shadow: 10px 10px 0 rgba(184, 138, 59, 0.55);
   }
-
   .product-card:hover {
     box-shadow: 13px 13px 0 rgba(184, 138, 59, 0.65);
   }
 }
-
 /* =========================================================
-PRODUCTS PAGE PHONE DESIGN
+            PRODUCT RESPONSIVE - PHONE
 ========================================================= */
-
 @media (max-width: 560px) {
-  /* Less spacing around filter area */
   .product-tools-section {
     padding-top: 2.5rem;
   }
-
-  /* All search/filter controls stack */
   .product-tools {
     grid-template-columns: 1fr;
-
     padding: 1.4rem;
-
     box-shadow: 7px 7px 0 rgba(184, 138, 59, 0.55);
   }
-
   .product-tool:first-child {
     grid-column: auto;
   }
-
-  /* Larger controls are easier to tap */
   .product-tool input,
   .product-tool select {
     min-height: 52px;
-
     font-size: 16px;
   }
-
-  /* One product per row */
   .product-grid {
     grid-template-columns: 1fr;
-
     gap: 2rem;
   }
-
   .product-section {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-
   .section-intro {
     margin-bottom: 2.2rem;
   }
-
-  /* Smaller gold shadow on phones */
   .product-card,
   .product-cta {
     box-shadow: 7px 7px 0 rgba(184, 138, 59, 0.55);
   }
-
   .product-card:hover {
     box-shadow: 9px 9px 0 rgba(184, 138, 59, 0.65);
   }
-
   .product-info {
     padding: 1.4rem;
   }
-
   .product-info h3 {
     font-size: 1.65rem;
   }
-
   .product-cta {
     padding: 2.5rem 1.4rem;
   }
-
   .custom-order-section {
     padding-bottom: 5rem;
   }
 }
-
 /* =========================================================
-GALLERY FILTER BUTTONS
+                    GALLERY FILTERS
 ========================================================= */
-
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -1316,7 +975,7 @@ GALLERY FILTER BUTTONS
   padding: 0.7rem 1rem;
   color: var(--forest);
   background-color: rgba(247, 241, 229, 0.82);
-  border: 1px solid var(--forest);
+  border: 1px solid var(--gold);
   font-family: var(--sans);
   font-size: 0.65rem;
   font-weight: 600;
@@ -1326,27 +985,44 @@ GALLERY FILTER BUTTONS
 }
 .filter.active,
 .filter:hover {
-  color: var(--cream);
-  background-color: var(--forest);
+  color: var(--deep);
+  background-color: var(--gold);
+  border-color: var(--gold);
 }
-
 /* =========================================================
-GALLERY
+                    GALLERY GRID
 ========================================================= */
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-/* Alternates placeholder colors */
+.gallery-item {
+  border: 2px solid rgba(184, 138, 59, 0.55);
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+.gallery-item:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
 .gallery-item:nth-child(2n) {
-  background-image: linear-gradient(145deg, #d9c69d, #7a8e72);
+  background-image:
+    linear-gradient(
+      145deg,
+      #d9c69d,
+      #7a8e72
+    );
 }
 .gallery-item:nth-child(3n) {
-  background-image: linear-gradient(145deg, #b6aa97, #315b4d);
+  background-image:
+    linear-gradient(
+      145deg,
+      #b6aa97,
+      #315b4d
+    );
 }
-/* Gallery image label */
 .gallery-item span {
   position: absolute;
   bottom: 1rem;
@@ -1354,6 +1030,7 @@ GALLERY
   padding: 0.4rem 0.7rem;
   color: white;
   background-color: rgba(14, 43, 36, 0.85);
+  border: 1px solid rgba(184, 138, 59, 0.75);
   font-size: 0.65rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1363,25 +1040,19 @@ GALLERY
   color: var(--muted);
   text-align: center;
 }
-
 /* =========================================================
-CONTACT PAGE LAYOUT
+                    CONTACT PAGE
 ========================================================= */
-
 .contact-layout {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: 4rem;
 }
-
-/* =========================================================
-CONTACT INFORMATION
-========================================================= */
-
 .contact-details {
   padding: 3rem;
   color: var(--cream);
   background-color: rgba(23, 60, 50, 0.97);
+  border: 2px solid var(--gold);
 }
 .contact-details h2 {
   color: var(--cream);
@@ -1390,29 +1061,23 @@ CONTACT INFORMATION
 .contact-details a {
   color: #e8d39b;
 }
-
 /* =========================================================
-CONTACT FORM
+                    CONTACT FORM
 ========================================================= */
-
 .contact-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
   padding: 2rem;
   background-color: rgba(255, 250, 240, 0.76);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid rgba(184, 138, 59, 0.45);
 }
-
-/* =========================================================
-FORM FIELDS
-========================================================= */
-
 .form-field {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
 }
-/* Makes certain fields span both columns */
 .form-field.full {
   grid-column: 1 / -1;
 }
@@ -1429,15 +1094,18 @@ FORM FIELDS
   padding: 0.9rem;
   color: var(--ink);
   background-color: var(--paper);
-  border: 1px solid var(--line);
+  border: 1px solid rgba(184, 138, 59, 0.45);
   font: inherit;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
-/* Gold outline makes the selected field easy to see */
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
+  border-color: var(--gold);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(184, 138, 59, 0.18);
 }
 .form-field textarea {
   min-height: 150px;
@@ -1452,11 +1120,9 @@ FORM FIELDS
   width: max-content;
   cursor: pointer;
 }
-
 /* =========================================================
-SCROLL REVEAL ANIMATION
+                    REVEAL ANIMATION
 ========================================================= */
-
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -1468,260 +1134,24 @@ SCROLL REVEAL ANIMATION
   opacity: 1;
   transform: none;
 }
-
-/* =========================================================
-HIDDEN ELEMENTS
-========================================================= */
-
 [hidden] {
   display: none !important;
 }
-
-/* =========================================
-SOCIAL MEDIA LINKS
-Used for the Instagram link in the footer
-========================================= */
-
+/* =========================================================
+                    SOCIAL LINKS
+========================================================= */
 .social-link {
   color: inherit;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 .social-link:hover,
 .social-link:focus {
   color: #c9a227;
   text-decoration: underline;
 }
 /* =========================================================
-GOLD ACCENTS
-========================================================= */
-
-/* ---------- Header Gold Line ---------- */
-/* Adds a thin gold line underneath the navigation bar */
-.site-header {
-  border-bottom: 2px solid var(--gold);
-}
-/* ---------- Navigation ---------- */
-/* Gives navigation links a subtle gold transition */
-.main-nav a {
-  transition:
-    color 0.25s ease,
-    border-color 0.25s ease;
-}
-/* Navigation turns gold when hovered */
-.main-nav a:hover,
-.main-nav a.active {
-  color: var(--gold);
-  border-color: var(--gold);
-}
-/* Adds gold border to the special navigation button */
-.main-nav .nav-cta {
-  border: 1px solid var(--gold);
-}
-/* Gold background when hovering over navigation button */
-.main-nav .nav-cta:hover {
-  color: var(--deep);
-  background-color: var(--gold);
-}
-/* ---------- Hero Section ---------- */
-/* Adds a gold line along the bottom of the green hero */
-.hero {
-  border-bottom: 3px solid var(--gold);
-}
-/* Decorative gold line underneath the eyebrow text */
-.hero .eyebrow::after {
-  content: "";
-  display: block;
-  width: 65px;
-  height: 2px;
-  margin-top: 0.8rem;
-  background-color: var(--gold);
-}
-/* ---------- Main Headings ---------- */
-/* Adds a small decorative gold line below section headings */
-.intro h2::after,
-.content-section h2::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 2px;
-  margin: 1rem auto 0;
-  background-color: var(--gold);
-}
-/* ---------- Category Cards ---------- */
-/* Gives category cards a stronger gold accent */
-.category-card {
-  border: 1px solid rgba(184, 138, 59, 0.55);
-  border-top: 3px solid var(--gold);
-}
-/* Gold glow when hovering */
-.category-card:hover {
-  border-color: var(--gold);
-  box-shadow:
-    0 18px 40px rgba(23, 60, 50, 0.12),
-    0 0 0 1px rgba(184, 138, 59, 0.2);
-}
-/* ---------- Category Icons ---------- */
-/* Makes decorative icons more noticeable */
-.card-icon {
-  color: var(--gold);
-  font-size: 2.2rem;
-}
-/* ---------- Category Links ---------- */
-.category-card a,
-.text-link {
-  color: var(--forest);
-  transition: color 0.25s ease;
-}
-.category-card a:hover,
-.text-link:hover {
-  color: var(--gold);
-}
-/* ---------- Mission Section ---------- */
-/* Gold borders frame the dark green mission section */
-.mission-band {
-  border-top: 3px solid var(--gold);
-  border-bottom: 3px solid var(--gold);
-}
-/* ---------- Artisan Section ---------- */
-/* Replaces the pale shadow with a gold-toned accent */
-.artisan-art {
-  box-shadow: 22px 22px 0 rgba(184, 138, 59, 0.55);
-}
-/* ---------- Product Cards ---------- */
-.product-card {
-  border: 1px solid rgba(184, 138, 59, 0.5);
-  border-top: 3px solid var(--gold);
-}
-.product-card:hover {
-  border-color: var(--gold);
-  box-shadow:
-    0 18px 40px rgba(23, 60, 50, 0.12),
-    0 0 0 1px rgba(184, 138, 59, 0.2);
-}
-/* ---------- Product Names ---------- */
-/* Product titles turn gold when card is hovered */
-.product-card:hover .product-info h3 {
-  color: var(--gold);
-}
-.product-info h3 {
-  transition: color 0.25s ease;
-}
-/* ---------- Product Prices ---------- */
-/* Makes prices slightly more prominent */
-.product-info .price {
-  color: var(--gold);
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-/* ---------- Values Section ---------- */
-/* Adds gold borders to value cards */
-.value {
-  border-top: 3px solid var(--gold);
-  border-bottom: 1px solid rgba(184, 138, 59, 0.35);
-}
-/* ---------- Prose / About Content ---------- */
-/* Adds a subtle gold edge to text sections */
-.prose {
-  border-left: 3px solid var(--gold);
-}
-/* ---------- Newsletter ---------- */
-/* Frames newsletter section with subtle gold */
-.newsletter {
-  border-top: 2px solid var(--gold);
-  border-bottom: 2px solid var(--gold);
-}
-/* ---------- Gallery ---------- */
-/* Adds gold frame around gallery images */
-.gallery-item {
-  border: 2px solid rgba(184, 138, 59, 0.55);
-  transition:
-    border-color 0.25s ease,
-    transform 0.25s ease;
-}
-.gallery-item:hover {
-  border-color: var(--gold);
-  transform: translateY(-4px);
-}
-/* ---------- Gallery Labels ---------- */
-.gallery-item span {
-  border: 1px solid rgba(184, 138, 59, 0.75);
-}
-/* ---------- Filter Buttons ---------- */
-.filter {
-  border: 1px solid var(--gold);
-}
-.filter.active,
-.filter:hover {
-  color: var(--deep);
-  background-color: var(--gold);
-  border-color: var(--gold);
-}
-/* ---------- Contact Information ---------- */
-/* Gold border around dark green contact box */
-.contact-details {
-  border: 2px solid var(--gold);
-}
-/* ---------- Contact Form ---------- */
-.contact-form {
-  border-top: 3px solid var(--gold);
-  border-bottom: 1px solid rgba(184, 138, 59, 0.45);
-}
-/* ---------- Form Fields ---------- */
-.form-field input,
-.form-field select,
-.form-field textarea {
-  border: 1px solid rgba(184, 138, 59, 0.45);
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
-/* Adds gold glow when typing in a field */
-.form-field input:focus,
-.form-field select:focus,
-.form-field textarea:focus {
-  border-color: var(--gold);
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(184, 138, 59, 0.18);
-}
-/* ---------- Buttons ---------- */
-/* Gives buttons a richer gold appearance */
-.button-primary {
-  color: var(--deep);
-  background-color: var(--gold);
-  border-color: var(--gold);
-}
-.button-primary:hover {
-  background-color: #cfaa62;
-  box-shadow: 0 5px 18px rgba(184, 138, 59, 0.3);
-}
-/* ---------- Footer ---------- */
-/* Gold line separates footer from page content */
-.site-footer {
-  border-top: 3px solid var(--gold);
-}
-/* Footer links transition to gold */
-.site-footer a {
-  transition: color 0.25s ease;
-}
-.site-footer a:hover {
-  color: var(--gold);
-}
-/* ---------- Copyright ---------- */
-/* Changes footer divider from white to subtle gold */
-.copyright {
-  border-top: 1px solid rgba(184, 138, 59, 0.45);
-}
-
-/* =========================================================
-MATCHING GOLD OFFSET BOXES ACROSS THE SITE
-index.html: category cards, artisan art, newsletter
-about.html: values and prose
-products.html: cards, notice, commission call to action
-gallery.html: gallery items
-contact.html: details and form
+              GLOBAL GOLD SHADOW STYLING
 ========================================================= */
 .category-card,
 .value,
@@ -1738,7 +1168,6 @@ contact.html: details and form
   border-color: rgba(184, 138, 59, 0.75);
   box-shadow: 14px 14px 0 rgba(184, 138, 59, 0.55);
 }
-
 .category-card:hover,
 .product-card:hover,
 .gallery-item:hover {
@@ -1746,190 +1175,114 @@ contact.html: details and form
   box-shadow: 18px 18px 0 rgba(184, 138, 59, 0.65);
 }
 /* =========================================================
-INSTAGRAM FOLLOW ME BUTTON
-Used for all Instagram buttons across the website.
+                    INSTAGRAM BUTTON
 ========================================================= */
-
 .instagram-button,
 .site-footer .instagram-button {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-
   width: 180px;
   height: 44px;
-
   margin-top: 1rem;
   padding: 0;
-
   color: #d62976;
   background-color: #f2f2f2;
-
   border-radius: 25px;
-
   text-decoration: none;
-
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
-
   overflow: visible;
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
-
-/* =========================================================
-INSTAGRAM COLOR CIRCLE
-========================================================= */
-
 .instagram-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 48px;
   height: 48px;
-
   margin-left: -2px;
-
   flex: 0 0 48px;
-
-  background: radial-gradient(
-    circle at 30% 105%,
-    #feda75 0%,
-    #fa7e1e 25%,
-    #d62976 50%,
-    #962fbf 75%,
-    #4f5bd5 100%
-  );
-
+  background:
+    radial-gradient(
+      circle at 30% 105%,
+      #feda75 0%,
+      #fa7e1e 25%,
+      #d62976 50%,
+      #962fbf 75%,
+      #4f5bd5 100%
+    );
   border: 3px solid #ffffff;
   border-radius: 50%;
-
   box-shadow:
     0 0 0 2px #d62976,
     0 3px 8px rgba(0, 0, 0, 0.25);
-
   transition: transform 0.25s ease;
 }
-
-/* =========================================================
-INSTAGRAM CAMERA ICON
-========================================================= */
-
 .instagram-camera {
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 25px;
   height: 25px;
-
   border: 3px solid #ffffff;
   border-radius: 7px;
 }
-
-/* Camera lens */
-
 .instagram-lens {
   display: block;
-
   width: 9px;
   height: 9px;
-
   border: 2px solid #ffffff;
   border-radius: 50%;
 }
-
-/* Small camera dot */
-
 .instagram-dot {
   position: absolute;
-
   top: 4px;
   right: 4px;
-
   display: block;
-
   width: 4px;
   height: 4px;
-
   background-color: #ffffff;
-
   border-radius: 50%;
 }
-
-/* =========================================================
-FOLLOW ME TEXT
-========================================================= */
-
 .instagram-text {
   display: block;
-
   flex: 1;
-
   margin: 0;
   padding: 0 12px 0 8px;
-
   color: #d62976;
-
   font-family: var(--sans);
   font-size: 0.72rem;
   font-weight: 700;
-
   line-height: 1;
-
   letter-spacing: 0.1em;
-
   text-align: center;
   white-space: nowrap;
 }
-
-/* =========================================================
-HOVER EFFECT
-========================================================= */
-
 .instagram-button:hover,
 .site-footer .instagram-button:hover {
   color: #d62976;
-
   transform: translateY(-3px);
-
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
-
-/* Keeps FOLLOW ME pink */
-
 .instagram-button:hover .instagram-text,
 .site-footer .instagram-button:hover .instagram-text {
   color: #d62976;
 }
-
-/* Slightly enlarges Instagram icon */
-
 .instagram-button:hover .instagram-icon {
   transform: scale(1.05);
 }
-
-/* =========================================================
-INSTAGRAM ACCESSIBILITY
-========================================================= */
-
-/* Adds a gold outline when the Instagram button
-is selected using the keyboard */
 .instagram-button:focus-visible,
 .site-footer .instagram-button:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 4px;
 }
 /* =========================================================
-TABLET DESIGN
+                    TABLET RESPONSIVE
 ========================================================= */
-
 @media (max-width: 850px) {
-  /* ---------- Mobile Navigation ---------- */
   .menu-button {
     display: block;
   }
@@ -1945,40 +1298,46 @@ TABLET DESIGN
     background-color: var(--cream);
     border-bottom: 1px solid var(--line);
   }
-  /* JavaScript adds this class when menu is opened */
   .main-nav.open {
     display: flex;
   }
   .main-nav a {
     text-align: center;
   }
-  /* ---------- Hero ---------- */
   .hero {
     grid-template-columns: 1fr;
   }
   .hero-copy {
     padding: 5rem 1.5rem;
   }
+  /* Main hero photograph */
   .hero-art {
     min-height: 480px;
+    padding: 2rem;
   }
-  /* ---------- Grid Layouts ---------- */
+  .hero-image {
+    max-width: 80%;
+    max-height: 400px;
+  }
   .category-grid,
-  .values-grid,
   .product-grid,
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  /* Keep About value cards side by side on tablets */
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 760px;
+    gap: 1.5rem;
   }
   .split,
   .contact-layout {
     grid-template-columns: 1fr;
   }
-  /* ---------- Newsletter ---------- */
   .newsletter {
     flex-direction: column;
     align-items: flex-start;
   }
-  /* ---------- Footer ---------- */
   .site-footer {
     grid-template-columns: 1fr 1fr;
   }
@@ -1986,13 +1345,10 @@ TABLET DESIGN
     grid-column: 1 / -1;
   }
 }
-
 /* =========================================================
-PHONE DESIGN
+                    PHONE RESPONSIVE
 ========================================================= */
-
 @media (max-width: 560px) {
-  /* ---------- Header ---------- */
   .site-header {
     height: 78px;
   }
@@ -2005,7 +1361,6 @@ PHONE DESIGN
   .main-nav {
     top: 78px;
   }
-  /* ---------- Hero ---------- */
   .hero {
     min-height: 0;
   }
@@ -2013,27 +1368,20 @@ PHONE DESIGN
   .page-hero h1 {
     font-size: 3.4rem;
   }
+  /* =======================================================
+                    MOBILE HERO IMAGE
+  ======================================================= */
   .hero-art {
     min-height: 400px;
+    padding: 1.5rem;
   }
-  /* ---------- Decorative Hero ---------- */
-  .moon {
-    left: 25%;
-    width: 230px;
-    height: 230px;
+  .hero-image {
+    max-width: 90%;
+    max-height: 350px;
   }
-  .bottle-one {
-    width: 110px;
-    height: 210px;
-  }
-  .bottle-two {
-    width: 95px;
-    height: 170px;
-  }
-  .sprig {
-    font-size: 10rem;
-  }
-  /* ---------- One Column Layouts ---------- */
+  /* =======================================================
+                    MOBILE GRIDS
+  ======================================================= */
   .category-grid,
   .values-grid,
   .product-grid,
@@ -2044,12 +1392,10 @@ PHONE DESIGN
     padding-right: 1.2rem;
     padding-left: 1.2rem;
   }
-  /* ---------- Artisan ---------- */
   .artisan-art {
     min-height: 420px;
     box-shadow: 12px 12px 0 var(--pale);
   }
-  /* ---------- Product CTA ---------- */
   .product-cta {
     padding: 2rem 1.3rem;
   }
@@ -2064,14 +1410,13 @@ PHONE DESIGN
   .form-field.full {
     grid-column: auto;
   }
-  /* ---------- Footer ---------- */
   .site-footer {
     grid-template-columns: 1fr;
   }
 }
-
-/* Keep the matching gold boxes at comfortable offsets on smaller screens.
-These rules follow PHONE DESIGN so its artisan shadow stays gold. */
+/* =========================================================
+              GOLD SHADOWS - TABLET
+========================================================= */
 @media (max-width: 850px) {
   .category-card,
   .value,
@@ -2092,7 +1437,9 @@ These rules follow PHONE DESIGN so its artisan shadow stays gold. */
     box-shadow: 13px 13px 0 rgba(184, 138, 59, 0.65);
   }
 }
-
+/* =========================================================
+              GOLD SHADOWS - PHONE
+========================================================= */
 @media (max-width: 560px) {
   .category-card,
   .value,
@@ -2113,11 +1460,9 @@ These rules follow PHONE DESIGN so its artisan shadow stays gold. */
     box-shadow: 9px 9px 0 rgba(184, 138, 59, 0.65);
   }
 }
-
 /* =========================================================
-ACCESSIBILITY
+                    REDUCED MOTION
 ========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto;
